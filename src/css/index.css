@@ -1,0 +1,76 @@
+html, body, #root, .app {
+	width: 100%;
+}
+body {
+	min-height: 100%;
+  margin: 0;
+}
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+.button,
+.fieldset,
+.input,
+.form,
+.link {
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.button,
+.link {
+  cursor: pointer;
+}
+.button:hover,
+.button:focus,
+.link:hover,
+.link:focus {
+  outline: none;
+  opacity: .6;
+}
+.button:active,
+.link:active {
+  opacity: 1;
+}
+.input:focus {
+  outline: none;
+}
+
+body {background-color:#000000; color:#555555;} 
+h4 {font-family: sans-serif; color:#555555; font-size:16px;}
+h3 {font-family: sans-serif; color:#555555;}
+p {font-family: sans-serif; color:#888888; font-size:14px;}
+a {font-family: sans-serif; color:#d15423; text-decoration:none;}
+
+.slider{
+  width:500px;
+  background: rgba(0,90,50,0.7);
+}
+
+
+/*
+
+
+HTML5 Canvas - Projecting 3D particles to a 2D canvas.
+from rectangleworld.com
+
+
+
+-- I did not code this, just added the jquery slider -- 
+
+-*/
