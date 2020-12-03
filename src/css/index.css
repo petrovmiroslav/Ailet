@@ -2,8 +2,9 @@ html, body, #root, .app {
 	width: 100%;
 }
 body {
-	min-height: 100%;
+  min-height: 100%;
   margin: 0;
+  background-color: #0F001E;
 }
 .visuallyhidden {
   position: absolute;
@@ -51,26 +52,23 @@ body {
   outline: none;
 }
 
-body {background-color:#000000; color:#555555;} 
-h4 {font-family: sans-serif; color:#555555; font-size:16px;}
-h3 {font-family: sans-serif; color:#555555;}
-p {font-family: sans-serif; color:#888888; font-size:14px;}
-a {font-family: sans-serif; color:#d15423; text-decoration:none;}
-
-.slider{
-  width:500px;
-  background: rgba(0,90,50,0.7);
+.link {
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
 }
-
-
-/*
-
-
-HTML5 Canvas - Projecting 3D particles to a 2D canvas.
-from rectangleworld.com
-
-
-
--- I did not code this, just added the jquery slider -- 
-
--*/
+.link--BG-purple{
+  background-color: #7744D2;
+}
+.link__text {
+  font-family: PT Root UI Web;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #FFFFFF;
+}

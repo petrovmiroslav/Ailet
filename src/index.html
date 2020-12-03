@@ -3,15 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Ailet</title>
 </head>
 <body>
-  <div style="text-align:center">
-    <div class="slider" id="slider-range"></div>
-    <div class="slider" id="slider-test"></div>
-      
-      <canvas id="canvasOne" width="900" height="520" ></canvas>
-      <p>HTML5 Canvas - Projecting 3D particles to a 2D canvas. &nbsp; &nbsp;<a href="http://www.rectangleworld.com">rectangleworld.com</a></p>
+  <div class="scroll-sections-horisontal">
+    <div class="navBar scroll-sections-horisontal__navBar">
+      <div class="navBar__inner">
+        <img src="./static/logo.svg" alt="Ailet logotype">
+        <div class="navBar__buttons">
+          <button class="button menuButon navBar__menuButon">
+            <div class="menuButon__icon">
+              <div class="menuButon__iconLine menuButon__iconLine--top"></div>
+              <div class="menuButon__iconLine menuButon__iconLine--bottom"></div>
+            </div>
+            <span class="menuButon__text">Menu</span>
+          </button>
+          <div class="navBar__buttonsGap"></div>
+          <button class="button navBar__chatButon"></button>
+        </div>
+      </div>
     </div>
+    <div class="sphereSection panel scroll-sections-horisontal__panel">
+      <div class="sphereSection__inner">
+        <div class="sphere sphereSection__sphere">
+          <canvas class="sphere__canvas" id="canvasOne" width="900" height="520" ></canvas>
+        </div>
+        <h1 class="sphereSection__header">From image to insight</h1>
+      </div>
+    </div>
+    <section class="heroSection panel scroll-sections-horisontal__panel">
+      <div class="heroSection__BG"></div>
+      <div class="heroSection__inner">
+        <div class="heroSection__block heroSection__block--left heroBlockLeft">
+          <div class="heroBlockLeft__content">
+            <h2 class="heroBlockLeft__header">We deliver <span class="heroBlockLeft__colorText">sales efficiency in retail</span> through innovation, amazing products and practices.</h2>
+            <p class="heroBlockLeft__text">That helps to keep products on shelf and makes your customers pleased</p>
+          </div>
+          <a class="heroBlockLeft__link link link--BG-purple">
+            <span class="link__text">Make your store perfect</span>
+          </a>
+        </div>
+        <div class="heroSection__block heroSection__block--right heroBlockRight">
+          <h2 class="heroBlockRight__header">
+            Shelf check is
+            <br>
+            <!-- <span class="heroBlockRight__gradientText"></span> -->
+            <img class="heroBlockRight__gradientText" src="./static/heroBlockGradientText1.svg" alt="80% faster">
+          </h2>
+          <h2 class="heroBlockRight__header">
+            Shelf data accuracy is 
+            <br>
+            <!-- <span class="heroBlockRight__gradientText"></span> -->
+            <img class="heroBlockRight__gradientText" src="./static/heroBlockGradientText2.svg" alt="80% faster">
+          </h2>
+          <h2 class="heroBlockRight__header">
+            Data
+            <br>
+            <!-- <span class="heroBlockRight__gradientText"></span> -->
+            <img class="heroBlockRight__gradientText" src="./static/heroBlockGradientText3.svg" alt="80% faster">
+            <br>
+            <span class="heroBlockRight__text">comparing with manual retail audit</span>
+          </h2>
+        </div>
+      </div>
+    </section>
+  </div>
 </body>
 </html>

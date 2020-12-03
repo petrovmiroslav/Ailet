@@ -1,0 +1,62 @@
+.navBar {
+
+}
+.navBar__inner {
+  height: 110px;
+  width: 100%;
+  padding: 0 112px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navBar__buttons {
+  display: flex;
+}
+.menuButon {
+  display: flex;
+  align-items: center;
+}
+.menuButon__icon {
+  width: 31px;
+  height: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menuButon__iconLine {
+  width: 100%;
+  border: 1px solid #0F001E;
+  transform-origin: 0% 50%;
+  transition: .25s ease-in-out;
+}
+.menuButon__iconLine--transform-down {
+  transform: translateX(12%) translateY(-340%) rotate(45deg);
+}
+.menuButon__iconLine--transform-up {
+  transform: translateX(12%) translateY(340%) rotate(-45deg);
+}
+.menuButon__text {
+  margin: 0 0 0 16px;
+  font-family: PT Root UI Web;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #0F001E;
+}
+.navBar__chatButon {
+  width: 70px;
+  height: 70px;
+  background: url("../static/chatLogo.svg" );
+}
+.navBar__buttonsGap {
+  width: 20vw;
+  min-width: 20px;
+  max-width: 197px;
+}
+.scroll-sections-horisontal__navBar {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}

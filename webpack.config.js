@@ -26,6 +26,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '',
   },
   optimization: {
     splitChunks: {
@@ -40,6 +41,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
+      },
       { test: /\.css$/, use:['style-loader', 'css-loader'] },
       {
         test: /\.m?js$/,

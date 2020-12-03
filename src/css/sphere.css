@@ -1,0 +1,7 @@
+.sphere__canvas {
+  width: 100%;
+}
+.sphere {
+  display: flex;
+  align-items: center;
+}

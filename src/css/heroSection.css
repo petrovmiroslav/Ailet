@@ -1,0 +1,86 @@
+.heroSection {
+  background-color: #FFFFFF;
+}
+.heroSection__BG {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../static/BG--big.svg");
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+}
+.heroSection__inner {
+  height: 100%;
+  padding: 0 112px 86px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.heroSection__block {
+
+}
+.heroSection__block--left {
+  max-width: 600px;
+}
+.heroBlockLeft__header {
+  margin: 0;
+  font-family: PT Root UI Web;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.heroBlockLeft__colorText {
+  color: #7744D2;
+}
+.heroBlockLeft__text {
+  max-width: 480px;
+  margin: 40px 0 49px;
+  font-family: PT Root UI Web;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: #0F001E;
+}
+.heroBlockLeft__link {
+  width: 280px;
+}
+
+.heroSection__block--right {
+  width: 386px;
+  border-top: 2px solid #0F001E;
+}
+.heroBlockRight__header {
+  font-family: PT Root UI Web;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #0F001E;
+}
+/* .heroBlockRight__gradientText {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 38px;
+  display: inline-block;
+}
+.heroBlockRight__gradientText--1 {
+  background: url("../static/heroBlockGradientText1.svg");
+  width: 175px;
+} */
+.heroBlockRight__gradientText {
+
+}
+.heroBlockRight__text {
+  font-family: PT Root UI Web;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 13px;
+  color: #505050;
+}

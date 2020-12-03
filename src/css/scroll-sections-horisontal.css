@@ -1,0 +1,10 @@
+.scroll-sections-horisontal {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.scroll-sections-horisontal__panel {
+  width: 100%;
+  flex-shrink: 0;
+}
