@@ -11,3 +11,5 @@ import '../css/heroSection.css';
 import '../css/whatIsBlock.css';
 import '../css/borderTopHeader.css';
 import '../css/trigger.css';
+import '../css/howItWorks.css';
+import './howItWorks.js';
