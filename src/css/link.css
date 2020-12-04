@@ -1,0 +1,21 @@
+.link {
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  background-color: #FFFFFF;
+}
+.link--BG-purple{
+  background-color: #7744D2;
+}
+.link__text {
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #FFFFFF;
+}

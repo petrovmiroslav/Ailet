@@ -1,0 +1,42 @@
+.trigger {
+  background-color: #7744D2;
+  border-radius: 7px;
+}
+.trigger__inner {
+  margin: auto;
+  padding: 80px 92px;
+  text-align: center;
+}
+.trigger__header,
+.trigger__text {
+  margin: auto;
+  font-family: PT Root UI;
+  font-style: normal;
+  text-align: center;
+  color: #FFFFFF;
+}
+.trigger__header {
+  margin: auto;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+}
+.trigger__text {
+  max-width: 821px;
+  padding: 34px 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+}
+.trigger__link {
+  margin: 14px auto 0;
+  width: 192px;
+}
+.trigger__linkText {
+  width: 145px;
+  height: 25px;
+  background: url("../static/triggerLinkText1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}

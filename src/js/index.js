@@ -1,9 +1,13 @@
 import '../css/index.css';
 import './sphere.js';
 import './Section-wipes--horisontal.js';
+import '../css/link.css';
 import '../css/sphere.css';
 import '../css/sphereSection.css';
 import '../css/scroll-sections-horisontal.css';
 import '../css/navbar.css';
 import './menuButon.js';
 import '../css/heroSection.css';
+import '../css/whatIsBlock.css';
+import '../css/borderTopHeader.css';
+import '../css/trigger.css';

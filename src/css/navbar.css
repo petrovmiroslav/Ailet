@@ -4,6 +4,7 @@
 .navBar__inner {
   height: 110px;
   width: 100%;
+  max-width: 1680px;
   padding: 0 112px;
   box-sizing: border-box;
   display: flex;
@@ -18,7 +19,7 @@
   align-items: center;
 }
 .menuButon__icon {
-  width: 31px;
+  width: 32px;
   height: 12px;
   display: flex;
   flex-direction: column;
@@ -31,14 +32,14 @@
   transition: .25s ease-in-out;
 }
 .menuButon__iconLine--transform-down {
-  transform: translateX(12%) translateY(-340%) rotate(45deg);
+  transform: translateX(4px) translateY(-7px) rotate(45deg);
 }
 .menuButon__iconLine--transform-up {
-  transform: translateX(12%) translateY(340%) rotate(-45deg);
+  transform: translateX(4px) translateY(7px) rotate(-45deg);
 }
 .menuButon__text {
   margin: 0 0 0 16px;
-  font-family: PT Root UI Web;
+  font-family: PT Root UI;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -57,6 +58,7 @@
 }
 .scroll-sections-horisontal__navBar {
   position: absolute;
+  top: 26px;
   z-index: 1;
   width: 100%;
 }

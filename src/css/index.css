@@ -1,3 +1,30 @@
+@font-face {
+	font-family: 'PT Root UI';
+	font-style: normal;
+	font-weight: normal;
+	src: local('PT Root UI'),
+		url('../static/fonts/PT Root UI_Medium.woff2') format('woff2'), 
+		url('../static/fonts/PT Root UI_Medium.woff') format('woff'),
+		url('../static/fonts/PT Root UI_Medium.ttf') format('ttf'),
+		url('../static/fonts/PT Root UI_Medium.eot') format('eot');
+}
+@font-face {
+	font-family: 'PT Root UI';
+	font-style: normal;
+	font-weight: bold;
+	src: local('PT Root UI'),
+		url('../static/fonts/PT Root UI_Bold.woff2') format('woff2'), 
+		url('../static/fonts/PT Root UI_Bold.woff') format('woff'),
+		url('../static/fonts/PT Root UI_Bold.ttf') format('ttf'),
+		url('../static/fonts/PT Root UI_Bold.eot') format('eot');
+}
+/* @font-face {
+  font-family: 'Formular';
+  src: url('../static/Formular-Medium.woff2') format('woff2'),
+    url('../static/Formular-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+} */
 html, body, #root, .app {
 	width: 100%;
 }
@@ -50,25 +77,4 @@ body {
 }
 .input:focus {
   outline: none;
-}
-
-.link {
-  height: 60px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 40px;
-}
-.link--BG-purple{
-  background-color: #7744D2;
-}
-.link__text {
-  font-family: PT Root UI Web;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 25px;
-  color: #FFFFFF;
 }
