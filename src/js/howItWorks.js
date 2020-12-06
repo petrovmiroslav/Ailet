@@ -19,7 +19,7 @@ function DOMContentLoaded () {
 function init () {
   gsap.defaults({overwrite: 'auto'});
 
-  gsap.set(".left-content > *", {xPercent: -50, yPercent: -50});
+  gsap.set(/* ".left-content > *" */['.imageToShow', '.textToShow'], {xPercent: -50, yPercent: -50});
 
   const ST = ScrollTrigger.create({
     trigger: ".content-container",
@@ -34,23 +34,15 @@ function init () {
   // Set up our content behaviors
   contentMarkers.forEach(marker => {
     marker.content = document.querySelector(`#${marker.dataset.markerContent}`);
-    
-    if(marker.content.tagName === "IMG") {
-      gsap.set(marker.content, {transformOrigin: "center"});
-      
-      marker.content.enter = function() {
-        gsap.fromTo(marker.content, {autoAlpha: 0, rotateY: -30}, {duration: 0.3, autoAlpha: 1, rotateY: 0});
-      }
-    } else if(marker.content.tagName === "BLOCKQUOTE") {
-      gsap.set(marker.content, {transformOrigin: "left center"});
-      
-      marker.content.enter = function() {
-        gsap.fromTo(marker.content, {autoAlpha: 0, rotateY: 50}, {duration: 0.3, autoAlpha: 1, rotateY: 0});
-      }
+
+    marker.content.enter = function() {
+      gsap.fromTo(marker.content, {autoAlpha: 0, translateY: '20%'}, {duration: 0.3, autoAlpha: 1, translateY: 0});
     }
     
     marker.content.leave = function() {
-      gsap.to(marker.content, {duration: 0.1, autoAlpha: 0});
+      /* gsap.fromTo(marker.content, {translateY: 30}, {duration: 0.3, autoAlpha: 0, translateY: -30}); */
+      gsap.to(marker.content, {duration: 0.3, autoAlpha: 0, translateY: "-20%"});
+      /* gsap.to(marker.content, {duration: 0.1, autoAlpha: 0}); */
     }
     
   });
@@ -59,14 +51,16 @@ function init () {
   let lastContent;
   function getCurrentSection() {
     let newContent;
-    const currScroll = scrollY - 1050;
+    const currScroll = scrollY;
     
     // Find the current section
     contentMarkers.forEach(marker => {
-      if(currScroll > marker.offsetTop) {
+      if(currScroll > marker.offsetTop - document.documentElement.clientHeight * 0.5) {
         newContent = marker.content;
       }
     });
+
+
     
     // If the current section is different than that last, animate in
     if(newContent

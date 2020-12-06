@@ -1,4 +1,18 @@
 @font-face {
+	font-family: 'Input Mono';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Input Mono'),
+		url('../static/fonts/InputMono-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'Input Mono';
+	font-style: normal;
+  font-weight: bold;
+	src: local('Input Mono'),
+		url('../static/fonts/InputMono-Bold.woff') format('woff');
+}
+@font-face {
 	font-family: 'PT Root UI';
 	font-style: normal;
 	font-weight: normal;
@@ -18,20 +32,13 @@
 		url('../static/fonts/PT Root UI_Bold.ttf') format('ttf'),
 		url('../static/fonts/PT Root UI_Bold.eot') format('eot');
 }
-/* @font-face {
-  font-family: 'Formular';
-  src: url('../static/Formular-Medium.woff2') format('woff2'),
-    url('../static/Formular-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-} */
 html, body, #root, .app {
 	width: 100%;
 }
 body {
   min-height: 100%;
   margin: 0;
-  background-color: #0F001E;
+  background-color: #FFFFFF;
 }
 .visuallyhidden {
   position: absolute;
@@ -77,4 +84,11 @@ body {
 }
 .input:focus {
   outline: none;
+}
+
+.backgoundLogo {
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
 }

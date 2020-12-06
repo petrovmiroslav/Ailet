@@ -1,0 +1,151 @@
+.solutions {
+  background-color: #ffffff;
+}
+.solutions__inner {
+  max-width: 1680px;
+  margin: auto;
+  padding: 150px 112px 0;
+}
+.solutions__header {
+  max-width: 392px;
+}
+
+
+.accordionSection {
+  min-height: 60vw;
+  margin: 100px 0 0;
+  display: flex;
+}
+
+.accordionSection__imagesContainer {
+  width: 50%;
+  position: relative;
+}
+.accordionSection__imgContainer {
+  width: 60vw;
+  height: 60vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0 100px 0 0;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0;
+}
+.accordionSection__img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+.accordionSection__accordion {
+  width: 50%;
+  margin: 0 0 0 auto;
+}
+
+.accordion {
+
+}
+.accordion__inner {
+  border-top: 1px solid #0F001E;
+}
+.accordion__block {
+  border-bottom: 1px solid #0F001E;
+}
+.accordion__block--active {
+
+}
+
+.accordion__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.accordion__headerText {
+  margin: 38px 0;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #0F001E;
+}
+.accordion__block--active .accordion__headerText {
+  color: #7744D2;
+}
+.accordion__headerIcon {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  flex-shrink: 0;
+}
+.accordion__iconLine {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #0F001E;
+  transition: 0.2s ease-in-out;
+}
+.accordion__block--active 
+.accordion__iconLine {
+  background-color: #7744D2;
+}
+
+.accordion__iconLine--plus {
+  transform: rotate(-90deg);
+}
+.accordion__block--active .accordion__iconLine--plus {
+  transform: rotate(0deg);
+}
+
+
+.accordion__content {
+  height: 0;
+  overflow: hidden;
+}
+
+.numList {
+  counter-reset: li; 
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+}
+.numList__item {
+  position:relative;
+}
+.numList__item:before {
+  content:counter(li);
+  counter-increment:li;
+}
+
+
+.accordion__numList {
+  padding: 0 0 46px;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #0F001E;
+}
+.accordion__numListItem {
+  padding: 0 0 0 36px;
+}
+.accordion__numListItem:before {
+  position: absolute;
+  left: 0px;
+  top: -6px;
+  font-family: Input Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: #0F001E;
+}
+
+
+

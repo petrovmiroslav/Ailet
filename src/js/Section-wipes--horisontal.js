@@ -17,7 +17,7 @@ function DOMContentLoaded () {
 };
 
 function init () {
-  let sections = gsap.utils.toArray(".panel");
+  /* let sections = gsap.utils.toArray(".panel");
   gsap.to(sections, {
     xPercent: -100 * (sections.length - 1),
     ease: "none",
@@ -25,9 +25,51 @@ function init () {
       trigger: ".scroll-sections-horisontal",
       pin: true,
       scrub: 1,
-      /* snap: 1 / (sections.length - 1), */
-      // base vertical scrolling on how wide the container is so it feels more natural.
       end: () => "+=" + document.querySelector(".scroll-sections-horisontal").offsetWidth
     }
+  }); */
+
+
+
+
+  const BGTL = gsap.timeline();
+  BGTL
+  .to(
+    '.backgoundLogo',
+    {xPercent: 0,
+     duration: 1})
+    .to(
+      '.backgoundLogo',
+      {xPercent: -100,
+       duration: 2});
+
+  ScrollTrigger.create({
+    trigger: '.scroll-sections-horisontal',
+    pin: '.backgoundLogo',
+    anticipatePin: 1,
+    animation: BGTL,
+    scrub: 1,
+    start: 'top top',
+    end: () => "+=" + document.querySelector(".scroll-sections-horisontal").offsetWidth//(document.documentElement.clientWidth * 1),
+  });
+  
+  const SphereTL = gsap.timeline();
+  SphereTL
+    .to(
+      '.sphereSection',
+      {xPercent: -100})
+    .to(
+      '.heroSection',
+      {xPercent: -100},
+      0);
+  
+  ScrollTrigger.create({
+    trigger: '.scroll-sections-horisontal',
+    pin: true,
+    anticipatePin: 1,
+    animation: SphereTL,
+    scrub: 1,
+    start: 'top top',
+    end: () => "+=" + document.querySelector(".scroll-sections-horisontal").offsetWidth,
   });
 }

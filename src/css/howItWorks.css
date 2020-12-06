@@ -1,23 +1,10 @@
 .howItWorks {
-
-}
-.howItWorks__inner {
   background-color: #0F001E;
 }
-
-
-
-.contentMarker {
-  height: 100vh;
-}
-.contentMarker1 {
-  background-color: red;
-}
-.contentMarker2 {
-  background-color: green;
-}
-.contentMarker3 {
-  background-color: blue;
+.howItWorks__inner {
+  max-width: 1680px;
+  margin: auto;
+  padding: 0 112px 192px;
 }
 
 .content-container {
@@ -27,21 +14,110 @@
   flex-basis: 100%;
 }
 
-.right-content {
-  /* padding-right: 15px; */
-}
-
 .left-content {
   height: 100vh;
   position: relative;
+  /* flex-basis: 100%; */
 }
+.howItWorks__left-content {
 
-.left-content > * {
+}
+.imageToShow {
+  max-width: 90%;
+}
+.imageToShow,
+.textToShow {
   position: absolute;
   left: 50%;
   top: 50%;
   opacity: 0;
   visibility: hidden;
+}
+/* .left-content > * {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  visibility: hidden;
+} */
+.left-content__plugImg {
+  height: 100%;
+}
+.howItWorks__sphere {
+  width: 50%;
+  height: 50%;
+  background-color: yellow;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.right-content {
+  /* padding-right: 15px; */
+  /* flex-basis: 100%; */
+}
+.howItWorks__right-content {
+  flex-basis: 60%;
+}
+.contentMarker {
+  height: 100vh;
+}
+.howItWorks__stage {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.howItWorks__stage--0 {
+  width: 370px;
+}
+.howItWorks__stageContent {
+  padding: 0 0 82px;
+}
+.howItWorks__stageHeader {
+  max-width: 402px;
+  margin: 0;
+  font-family: Input Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.howItWorks__stageHeader--big {
+  font-size: 66px;
+  line-height: 76px;
+  letter-spacing: 0.03em;
+}
+.howItWorks__stageText {
+  margin: 50px 0 0;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+.howItWorks__stageText--white {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  opacity: 1;
+}
+.howItWorks__link {
+  width: 477px;
+}
+.howItWorks__linkText {
+  width: 400px;
+  height: 15px;
+  background: url("../static/triggerLinkText2.svg");
 }
 
 @media screen and (max-width: 800px) {
