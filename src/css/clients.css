@@ -1,0 +1,32 @@
+.clients {
+
+}
+.clients__inner {
+  max-width: 1680px;
+  margin: auto;
+  padding: 186px 112px 166px;
+}
+.clients__borderTopHeader {
+  margin: 0;
+}
+
+.clients__parallax {
+  width: 100%;
+  overflow: hidden;
+}
+.clients__parallaxBlock {
+  height: 92px;
+  width: 200%;
+  width: 200vw;
+  padding: 50px 0;
+  display: flex;
+}
+.clients__logoImg {
+  max-width: 50%;
+  max-height: 100%;
+  padding: 0 46px;
+}
+
+.clients__triggerInner {
+  max-width: 600px;
+}

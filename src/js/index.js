@@ -3,6 +3,7 @@ import '../css/index.css';
 import {Hero as HeroModule} from './hero.js';
 import '../css/link.css';
 import '../css/sphere.css';
+import '../css/menu.css';
 import '../css/sphereSection.css';
 import '../css/scroll-sections-horisontal.css';
 import '../css/navbar.css';
@@ -18,6 +19,9 @@ import '../css/solutions.css';
 import {Accordion as AccordionModule} from './accordion.js';
 import '../css/why.css';
 import {Why as WhyModule} from './why.js';
+import '../css/clients.css';
+import {Clients as ClientsModule} from './clients.js';
+import '../css/contacts.css';
 
 DOMready();
 function DOMready() {
@@ -48,5 +52,7 @@ function init () {
 	const Why = new WhyModule();
 	Why.init();
 
+	const Clients = new ClientsModule();
+	Clients.init();
 	/* document.querySelector('.preloaderCover').style.display = 'none'; */
 }

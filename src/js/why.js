@@ -16,9 +16,9 @@ export class Why {
     this.contentBlocks.forEach((sideBlock, i) => {
       let leftLayout = (i % 2 > 0) ? false : true;
       let tween = gsap.fromTo(sideBlock, 
-        { yPercent: leftLayout ? -10 : 10
+        { yPercent: leftLayout ? 10 : -10
         },
-        { yPercent: leftLayout ? 10 : -10,
+        { yPercent: leftLayout ? -10 : 10,
         });
   
       ScrollTrigger.create({

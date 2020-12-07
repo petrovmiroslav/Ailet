@@ -18,9 +18,7 @@
 	font-weight: normal;
 	src: local('PT Root UI'),
 		url('../static/fonts/PT Root UI_Medium.woff2') format('woff2'), 
-		url('../static/fonts/PT Root UI_Medium.woff') format('woff'),
-		url('../static/fonts/PT Root UI_Medium.ttf') format('ttf'),
-		url('../static/fonts/PT Root UI_Medium.eot') format('eot');
+		url('../static/fonts/PT Root UI_Medium.woff') format('woff');
 }
 @font-face {
 	font-family: 'PT Root UI';
@@ -28,9 +26,15 @@
 	font-weight: bold;
 	src: local('PT Root UI'),
 		url('../static/fonts/PT Root UI_Bold.woff2') format('woff2'), 
-		url('../static/fonts/PT Root UI_Bold.woff') format('woff'),
-		url('../static/fonts/PT Root UI_Bold.ttf') format('ttf'),
-		url('../static/fonts/PT Root UI_Bold.eot') format('eot');
+		url('../static/fonts/PT Root UI_Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'PT Root UI';
+	font-style: normal;
+	font-weight: lighter;
+	src: local('PT Root UI'),
+		url('../static/fonts/PT Root UI_Light.woff2') format('woff2'), 
+		url('../static/fonts/PT Root UI_Light.woff') format('woff');
 }
 html, body, #root, .app {
 	width: 100%;

@@ -1,4 +1,6 @@
 .borderTopHeader {
+  max-width: 1095px;
+  margin: 0 0 0 auto;
   display: flex;
   justify-content: flex-end;
 }
@@ -6,7 +8,7 @@
   padding: 44px 0 44px;
 }
 .borderTopHeader__content {
-  width: 1095px;
+  width: 100%;
   padding: 40px 0 0;
   border-top: 2px solid #0F001E;
 }

@@ -1,12 +1,5 @@
 .whatIsBlock {
-  /* height: 100vh;
-  width: 100vw; */
   position: relative;
-
-  /* background: url("../static/BG--big.svg"); */
-  background-position-x: 100%;
-  background-repeat: no-repeat;
-  /* background-color: #FFFFFF; */
 }
 .whatIsBlock__inner {
   max-width: 1680px;
@@ -22,6 +15,7 @@
 }
 .whatIsBlock__sliderInner {
   padding: 176px 0 176px;
+  overflow: hidden;
   text-align: center;
   background: url("../static/BG--question.svg");
   background-repeat: no-repeat;

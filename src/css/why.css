@@ -1,17 +1,22 @@
 .why {
+  position: relative;
   background-color: #ffffff;
 }
+.why__backgoundLogoImg {
+  transform: none;
+}
 .why__inner {
+  position: relative;
   max-width: 1680px;
   margin: auto;
-  padding: 260px 112px 0;
+  padding: 260px 112px 160px;
 }
-.why__contentHeader {
-  width: 100%;
+.why__borderTopHeader {
+  max-width: 100%;
 }
 
 .why__parallaxSection {
-  padding: 96px 0 358px;
+  padding: 96px 0 192px;
 }
 .whyParallax__inner {
   max-width: 1090px;
@@ -53,34 +58,64 @@
   opacity: 0.8;
 }
 
-
-
-.why__borderTopHeader {
-  justify-content: flex-start;
+.why__partnersInner {
+  display: flex;
 }
+
+.why__contentContainer {
+  flex-basis: 100%;
+}
+
+
 .why__partnersHeader {
-  max-width: 728px;
+
 }
 
 .why__partnersContent {
-
+  padding: 94px 0 0 24%;
 }
 .why__partnersTextContent {
 
 }
 .why__partnersText {
-  max-width: 547px;
+  margin: 0;
+  padding: 0 0 50px;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+  opacity: 0.8;
 }
 
 
 .caseLink {
-
+  height: 30px;
+  position: relative;
+  padding: 0 30px;
+  display: inline-block;
+  cursor: pointer;
 }
 .caseLink__circle {
   width: 30px;
   height: 30px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: #7744D2;
-  border-radius: 50%;
+  border-radius: 30px;
+  transition: .25s;
+}
+.caseLink:hover .caseLink__circle {
+  width: 100%;
+}
+.caseLink__textContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 .caseLink__text {
   font-family: PT Root UI;
@@ -91,4 +126,61 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #7744D2;
+  transition: .3s;
+  transform: translateX(18px);
+}
+.caseLink:hover .caseLink__text {
+  color: #ffffff;
+  transform: translateX(0px);
+}
+
+.why__partnersCounterContainer {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+.why__partnersCounterHeader {
+  margin: 0;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 54px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.why__partnersCounter {
+  margin: 0 0 -28px;
+  display: block;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 202px;
+  line-height: 255px;
+  text-transform: uppercase;
+  color: #7744D2;
+}
+
+
+
+
+.why__partnersLogos {
+  height: 92px;
+  margin: 134px 0 0;
+  display: flex;
+}
+.why__partnersLogoImgContainer {
+  min-width: 240px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 0 68px 0;
+  box-sizing: border-box;
+  display: flex;
+}
+.why__partnersLogoImg {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
 }

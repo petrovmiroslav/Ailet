@@ -1,4 +1,8 @@
 .trigger {
+  background: url('../static/BG--trigger.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: #7744D2;
   border-radius: 7px;
 }

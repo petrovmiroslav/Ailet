@@ -1,0 +1,16 @@
+.body--scroll-lock {
+  overflow: hidden;
+  padding-right: 15px;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  background-color: #0F001E;
+  display: none;
+}
