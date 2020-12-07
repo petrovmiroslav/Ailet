@@ -2,36 +2,38 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-DOMready();
-function DOMready() {
-  if (document.readyState != 'loading'){
-    DOMContentLoaded();
-  } else {
-    document.addEventListener('DOMContentLoaded', DOMContentLoaded);
+
+export class WhatIs {
+  constructor () {
+    this.headers = gsap.utils.toArray('.whatIsBlock__sliderHeader');
   }
-}
-function DOMContentLoaded () {
-  document.removeEventListener('DOMContentLoaded', DOMContentLoaded);
-  init();
-};
 
-function init () {
+  init () {
+    this.setUpwhatIsBlock();
+  }
 
-gsap.utils.toArray('.whatIsBlock__sliderHeader').forEach((header, i)=>{
-  let leftLayout = (i % 2 > 0) ? false : true;
-  let tween = gsap.fromTo(header, 
-    { xPercent: leftLayout ? -10 : 10
-    },
-    { xPercent: leftLayout ? 10 : -10,
+  getTween (element, isLeftLayout) {
+    return gsap.fromTo(element, 
+      { xPercent: isLeftLayout ? -10 : 10
+      },
+      { xPercent: isLeftLayout ? 10 : -10,
+      });
+  }
+
+  setUpwhatIsBlock () {
+    this.headers.forEach((header, i)=>{
+      let leftLayout = (i % 2 > 0) ? false : true;
+      let tween = this.getTween(header, leftLayout);
+
+      ScrollTrigger.create({
+        trigger: header,
+        start: 'top bottom',
+        end: 'bottom top',
+        toggleActions: 'restart complete reverse complete',
+        animation: tween,
+        scrub: 1,
+      });
     });
-  ScrollTrigger.create({
-    trigger: header,
-    start: 'top bottom',
-    end: 'bottom top',
-    toggleActions: 'restart complete reverse complete',
-    animation: tween,
-    scrub: 1,
-  });
-});
+  }
 
 }

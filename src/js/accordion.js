@@ -1,96 +1,106 @@
 import { gsap } from "gsap";
 
-DOMready();
-function DOMready() {
-  if (document.readyState != 'loading'){
-    DOMContentLoaded();
-  } else {
-    document.addEventListener('DOMContentLoaded', DOMContentLoaded);
+export class Accordion {
+  constructor () {
+    this.currBlockActive = 0,
+    this.accordionImages = document.querySelectorAll('.accordionSection__imgContainer');
+    this.accordionBlocks = this.getAccordionBlocks(document.querySelectorAll('.accordion__block')),
+    
+
+    this.blockContentAnimationDuration = 0.35,
+    this.blockImgAnimationDuration = 0.7;
+
+    this.blockContentStateON = {
+      height: 'auto',
+      duration: this.blockContentAnimationDuration,
+    };
+
+    this.blockContentStateOFF = {
+      height: 0,
+      duration: this.blockContentAnimationDuration,
+    };
+
+    this.blockImgStateON = {
+      opacity: 1,
+      duration: this.blockImgAnimationDuration,
+    };
+
+    this.blockImgStateOFF = {
+      opacity: 0,
+      duration: this.blockImgAnimationDuration,
+    };
+
+
+    this.accordion_Header_Click_Handler = this.accordion_Header_Click_Handler.bind(this);
   }
-}
-function DOMContentLoaded () {
-  document.removeEventListener('DOMContentLoaded', DOMContentLoaded);
-  init();
-};
 
-function init () {
-  let currBlockActive = 0,
-  accordionBlocks = document.querySelectorAll('.accordion__block'),
-  accordionImages = document.querySelectorAll('.accordionSection__imgContainer');
+  init () {
+    this.addEventListenersToHeaders();
 
-  accordionBlocks = Array.from(accordionBlocks).map((currBlock, i)=>{
+    this.set1BlockInitState();
+  }
+
+  createBlock (currBlock, i) {
     const block = { 
       block: currBlock,
       header: currBlock.querySelector('.accordion__header'),
       content: currBlock.querySelector('.accordion__content'),
-      img: accordionImages[i]};
+      img: this.accordionImages[i]};
     
     block.header.dataset.accordionIndex = i;
 
-    block.header.addEventListener('click', accordion_Header_Click_Handler);
-
     return block;
-  });
+  }
 
-  function accordion_Header_Click_Handler (event) {
-    if (currBlockActive === +event.currentTarget.dataset.accordionIndex) return;
+  getAccordionBlocks (elements) {
+    return (
+      Array.from(elements).map(this.createBlock.bind(this))
+    );
+  }
 
-    currBlockActive = +event.currentTarget.dataset.accordionIndex;
+  addEventListenersToHeaders () {
+    this.accordionBlocks.forEach(this.addClickListenerToHeaders.bind(this));
+  }
 
-    accordionBlocks.forEach((block, i) => {
-      currBlockActive === i 
-        ? blockTurnON(block, i)
-        : blockTurnOFF(block, i);
+  addClickListenerToHeaders (elem) {
+    elem.header.addEventListener('click', this.accordion_Header_Click_Handler);
+  }
+  
+  accordion_Header_Click_Handler (event) {
+    if (this.currBlockActive === +event.currentTarget.dataset.accordionIndex) return;
+
+    this.currBlockActive = +event.currentTarget.dataset.accordionIndex;
+
+    this.accordionBlocks.forEach((block, i) => {
+      this.currBlockActive === i 
+        ? this.blockTurnON(block, i)
+        : this.blockTurnOFF(block, i);
     });
   }
 
-  const blockContentAnimationDuration = 0.35,
-  blockImgAnimationDuration = 0.7;
-
-  const blockContentStateON = {
-    height: 'auto',
-    duration: blockContentAnimationDuration,
-  };
-
-  const blockContentStateOFF = {
-    height: 0,
-    duration: blockContentAnimationDuration,
-  };
-
-  const blockImgStateON = {
-    opacity: 1,
-    duration: blockImgAnimationDuration,
-  };
-
-  const blockImgStateOFF = {
-    opacity: 0,
-    duration: blockImgAnimationDuration,
-  };
-
-  set1BlockInitState();
-  function set1BlockInitState () {
-    let block = accordionBlocks[0];
+  set1BlockInitState () {
+    let block = this.accordionBlocks[0];
     gsap.timeline()
-    .to(block.content, blockContentStateON)
-    .to(block.img, blockImgStateON, 0);
+    .to(block.content, this.blockContentStateON)
+    .to(block.img, this.blockImgStateON, 0);
   }
 
-  function blockTurnON (block, index) {
+  blockTurnON (block, index) {
     block.block.classList.add('accordion__block--active');
 
     let turnONTimeline = gsap.timeline();
     turnONTimeline
-      .to(block.content, blockContentStateON)
-      .to(block.img, blockImgStateON, 0);
+      .to(block.content, this.blockContentStateON)
+      .to(block.img, this.blockImgStateON, 0);
   }
 
-  function blockTurnOFF (block, index) {
+  blockTurnOFF (block, index) {
     block.block.classList.remove('accordion__block--active');
 
     let turnOFFTimeline = gsap.timeline();
     turnOFFTimeline
-      .to(block.content, blockContentStateOFF)
-      .to(block.img, blockImgStateOFF, 0);
+      .to(block.content, this.blockContentStateOFF)
+      .to(block.img, this.blockImgStateOFF, 0);
   }
 
 }
