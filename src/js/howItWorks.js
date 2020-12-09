@@ -1,17 +1,19 @@
-import { gsap } from "gsap";
+/* import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger); */
 
 export class HowItWorks {
-  constructor () {
+  constructor (gsap, ScrollTrigger) {
+    this.gsap = gsap;
+    this.ScrollTrigger = ScrollTrigger;
 
-    this.backgroundTimeline = gsap.timeline();
+    this.backgroundTimeline = this.gsap.timeline();
 
     this.Stages = ['Ailet AI', 'Stage 1', 'Stage 2'];
     this.StageContent = document.querySelector('.howItWorks__stageIndicatorHeader');
-    this.stageImages = gsap.utils.toArray('.ST__stageImgContainer');
-    this.Blocks = gsap.utils.toArray('.ST__contentBlock--right');
+    this.stageImages = this.gsap.utils.toArray('.ST__stageImgContainer');
+    this.Blocks = this.gsap.utils.toArray('.ST__contentBlock--right');
     this.Container = document.querySelector('.ST__Container');
     this.LeftContent = document.querySelector('.ST__contentContainer--left');
     this.StageIndicatorContainer = document.querySelector('.ST__contentContainer--stage');
@@ -28,14 +30,14 @@ export class HowItWorks {
     this.Blocks.forEach((block, i)=>{
 
       /* FADEOUT */
-      let fadeOut = gsap.timeline();
+      let fadeOut = this.gsap.timeline();
   
       if (i > 0) {
         this.addFadeOutAnimToRightBlock(fadeOut, block);
         this.addFadeOutAnimToStageImg(fadeOut, this.stageImages[i - 1]);
       }
         
-      ScrollTrigger.create({
+      this.ScrollTrigger.create({
         trigger: block,
         start: 'top 50%',
         end: 'top 10%',
@@ -46,7 +48,7 @@ export class HowItWorks {
       });
   
       /* FADEIN */
-      let fadeIn = gsap.timeline();
+      let fadeIn = this.gsap.timeline();
   
       if (i < this.Blocks.length - 1) {
         this.addFadeInAnimToRightBlock(fadeIn, block);
@@ -56,7 +58,7 @@ export class HowItWorks {
         this.addFadeInAnimToStageImg(fadeIn, this.stageImages[i - 1]);
       }
   
-      ScrollTrigger.create({
+      this.ScrollTrigger.create({
         trigger: block,
         start: 'bottom 90%',
         end: 'bottom 50%',
@@ -70,13 +72,13 @@ export class HowItWorks {
   }
 
   stageIncAnim () {
-    gsap.timeline()
+    this.gsap.timeline()
       .to(this.StageContent, {autoAlpha: 0, duration: 0.2})
       .call(this.stageInc.bind(this))
       .to(this.StageContent, {autoAlpha: 1, duration: 0.2});
   }
   stageDecAnim () {
-    gsap.timeline()
+    this.gsap.timeline()
       .to(this.StageContent, {autoAlpha: 0, duration: 0.2})
       .call(this.stageDec.bind(this))
       .to(this.StageContent, {autoAlpha: 1, duration: 0.2});
@@ -93,33 +95,34 @@ export class HowItWorks {
   }
 
   setBlocksInitState () {
-    let blocksArr = gsap.utils.toArray('.ST__contentBlock--right');
+    let blocksArr = this.gsap.utils.toArray('.ST__contentBlock--right');
   
     blocksArr.shift();
   
-    gsap.set(
+    this.gsap.set(
       blocksArr,
       {opacity: 0}
     );
   
-    gsap.set(
+    this.gsap.set(
       this.stageImages, 
       { autoAlpha: 0,
         yPercent: 10 });
   }
 
   pinLeftSide () {
-    ScrollTrigger.create({
+    this.ScrollTrigger.create({
       trigger: this.Container,
       start: 'top top',
       end: 'bottom bottom',
       pin: this.LeftContent,
       anticipatePin: 1,
+      /* refreshPriority: -10 */
     });
   }
 
   pinStageIndicator () {
-    ScrollTrigger.create({
+    this.ScrollTrigger.create({
       trigger: this.Container,
       start: 'top top',
       end: 'bottom bottom',

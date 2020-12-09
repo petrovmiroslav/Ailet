@@ -11,12 +11,36 @@
   align-items: center;
   justify-content: space-between;
 }
+.navBar__logosContainer {
+  height: 76px;
+  position: relative;
+}
+.navBar__logo {
+  max-height: 100%;
+  display: block;
+  transition: 0.15s ease-in-out;
+}
+.navBar__logo--light {
+
+}
+.navBar__logo--dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.navBar__logo--opacity-0 {
+  opacity: 0;
+}
 .navBar__buttons {
   display: flex;
 }
 .menuButon {
   display: flex;
   align-items: center;
+  color: #0F001E;
+}
+.menuButon--active {
+  color: #FFFFFF;
 }
 .menuButon__icon {
   width: 32px;
@@ -31,6 +55,9 @@
   transform-origin: 0% 50%;
   transition: .25s ease-in-out;
 }
+.menuButon__iconLine--active {
+  border: 1px solid #FFFFFF;
+}
 .menuButon__iconLine--transform-down {
   transform: translateX(4px) translateY(-7px) rotate(45deg);
 }
@@ -44,12 +71,23 @@
   font-weight: bold;
   font-size: 20px;
   line-height: 25px;
-  color: #0F001E;
 }
 .navBar__chatButon {
   width: 70px;
   height: 70px;
-  background: url("../static/chatLogo.svg" );
+  position: relative;
+}
+.navBar__chatButtonLogo {
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.15s ease-in-out;
+  /* background: url("../static/chatLogo.svg" ); */
+}
+.navBar__chatButtonLogo--gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: url("../static/chatLogo--gradient.svg" ); */
 }
 .navBar__buttonsGap {
   width: 20vw;

@@ -1,11 +1,14 @@
-import { gsap } from "gsap";
+/* import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
+ */
 
 export class WhatIs {
-  constructor () {
-    this.headers = gsap.utils.toArray('.whatIsBlock__sliderHeader');
+  constructor (gsap, ScrollTrigger) {
+    this.gsap = gsap;
+    this.ScrollTrigger = ScrollTrigger;
+
+    this.headers = this.gsap.utils.toArray('.whatIsBlock__sliderHeader');
   }
 
   init () {
@@ -13,7 +16,7 @@ export class WhatIs {
   }
 
   getTween (element, isLeftLayout) {
-    return gsap.fromTo(element, 
+    return this.gsap.fromTo(element, 
       { xPercent: isLeftLayout ? -10 : 10
       },
       { xPercent: isLeftLayout ? 10 : -10,
@@ -25,7 +28,7 @@ export class WhatIs {
       let leftLayout = (i % 2 > 0) ? false : true;
       let tween = this.getTween(header, leftLayout);
 
-      ScrollTrigger.create({
+      this.ScrollTrigger.create({
         trigger: header,
         start: 'top bottom',
         end: 'bottom top',

@@ -1,0 +1,283 @@
+.chat {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  background-color: #0F001E;
+  transition: transform .75s ease-in-out;
+  transform: translateX(100%);
+
+  overflow-y: auto;
+}
+.chat--open {
+  transform: translateX(0);
+}
+.chat__closeButton {
+  width: 16px;
+  height: 16px;
+  margin: 36px 0 0 auto;
+  position: absolute;
+  top: 0;
+  display: block;
+}
+.chat__closeButtonIcon {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.chat__inner {
+  max-width: 1680px;
+  min-height: 100%;
+  margin: auto;
+  padding: 36px 74px 0;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.chat__layout {
+  /* max-width: 50%; */
+  margin: 0 0 0 auto;
+}
+.chat__header {
+  margin: 0;
+  font-family: Input Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+.chat__form {
+  margin: 80px 0 0;
+}
+
+
+.form {
+
+}
+.form__container {
+
+}
+.form__container--column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.form__inputContainer {
+  width: 100%;
+  margin: 0 0 40px;
+  position: relative;
+  font-size: 0;
+}
+.form__inputContainer--column-2 {
+  width: 40%;
+}
+
+.form__input,
+.form__label--placeholder,
+.form__errorMessage {
+  transition: 0.25s ease-in-out;
+ }
+.form__input {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  border-bottom: 1px solid #FFFFFF;
+
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+.form__input--textarea {
+  min-height: 70px;
+  padding: 10px 0 10px;
+  resize: none;
+}
+.form__input--error {
+  border-bottom: 1px solid #FF0707;
+}
+.form__label {
+  
+}
+.form__label--placeholder {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  transform-origin: bottom left;
+
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  opacity: 0.35;
+}
+.form__label--button {
+  width: 100%;
+  opacity: 1;
+  background: #7744D2;
+  pointer-events: auto;
+}
+.form__input:active + .form__label--button {
+  opacity: 0.6;
+}
+.form__input:focus + .trigger__link .trigger__linkTextContainer {
+  transform: translateY(-200%);
+}
+.form__input:focus + .form__label--placeholder,
+.form__input--filled + .form__label--placeholder,
+.is-open + .form__label--placeholder {
+  transform: translateY(-75%) scale(0.8);
+}
+.form__input--error + .form__label--placeholder {
+  color: #FF0707;
+}
+.form__label--checkbox {
+  justify-content: flex-start;
+  background: none;
+}
+.form__checkbox,
+.form__checkboxCircleInner {
+  border-radius: 50%;
+}
+.form__checkbox {
+  width: 20px;
+  height: 20px;
+  margin: 0 14px 0 0;
+  position: relative;
+  flex-shrink: 0;
+  border: 1px solid #7744D2;
+}
+.form__checkboxCircleInner {
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #7744D2;
+  opacity: 0;
+}
+.form__input:focus + .form__label--checkbox {
+  opacity: 0.6;
+}
+.form__input:checked + .form__label .form__checkboxCircleInner {
+  opacity: 1;
+}
+.form__checkboxText {
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+.form__errorMessage {
+  margin: 8px auto 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: #FF0707;
+  opacity: 0;
+}
+.form__input--error ~ .form__errorMessage {
+  opacity: 0.35;
+}
+
+.form__selectIcon {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  transition: 0.25s ease-in-out;
+  transform: rotate(0deg);
+}
+.form__input--showDropdown ~ .form__selectIcon,
+.is-open ~ .form__selectIcon {
+  transform: rotate(-180deg);
+}
+
+.form__label--button .form__submitText {
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #FFFFFF;
+  background: none;
+  -webkit-text-fill-color: unset;
+}
+
+.choices {
+  margin: 0;
+}
+.choices__inner {
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: unset;
+  background-color: unset;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+.choices__list--single {
+  padding: 0;
+}
+.choices__list--dropdown {  
+  border: none;
+  border-radius: 0 0 6px 6px;
+}
+.choices__list--dropdown .choices__list {
+  max-height: 180px;
+}
+.choices__list--dropdown .choices__item,
+.choices__input,
+.choices[data-type*=select-one] .choices__input {
+  padding: 10px 0 10px 24px;
+  box-sizing: border-box;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: #0F001E;
+}
+.choices[data-type*=select-one]:after {
+  display: none !important;
+}

@@ -29,7 +29,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "choices.js": "^9.0.1",
     "gsap": "^3.5.1",
-    "scrollmagic": "^2.0.8"
+    "scrollmagic": "^2.0.8",
+    "validator": "^13.5.1"
   }
 }

@@ -1,7 +1,10 @@
-import { gsap } from "gsap";
-
+/* import { gsap } from "gsap";
+ */
 export class Accordion {
-  constructor () {
+  constructor (gsap, ScrollTrigger) {
+    this.gsap = gsap;
+    this.ScrollTrigger = ScrollTrigger;
+
     this.currBlockActive = 0,
     this.accordionImages = document.querySelectorAll('.accordionSection__imgContainer');
     this.accordionBlocks = this.getAccordionBlocks(document.querySelectorAll('.accordion__block')),
@@ -80,7 +83,7 @@ export class Accordion {
 
   set1BlockInitState () {
     let block = this.accordionBlocks[0];
-    gsap.timeline()
+    this.gsap.timeline()
     .to(block.content, this.blockContentStateON)
     .to(block.img, this.blockImgStateON, 0);
   }
@@ -88,7 +91,7 @@ export class Accordion {
   blockTurnON (block, index) {
     block.block.classList.add('accordion__block--active');
 
-    let turnONTimeline = gsap.timeline();
+    let turnONTimeline = this.gsap.timeline();
     turnONTimeline
       .to(block.content, this.blockContentStateON)
       .to(block.img, this.blockImgStateON, 0);
@@ -97,7 +100,7 @@ export class Accordion {
   blockTurnOFF (block, index) {
     block.block.classList.remove('accordion__block--active');
 
-    let turnOFFTimeline = gsap.timeline();
+    let turnOFFTimeline = this.gsap.timeline();
     turnOFFTimeline
       .to(block.content, this.blockContentStateOFF)
       .to(block.img, this.blockImgStateOFF, 0);

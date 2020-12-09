@@ -1,11 +1,14 @@
-import { gsap } from "gsap";
+/* import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
+ */
 
 export class Why {
-  constructor () {
-    this.contentBlocks = gsap.utils.toArray('.whyParallax__contentBlock');
+  constructor (gsap, ScrollTrigger) {
+    this.gsap = gsap;
+    this.ScrollTrigger = ScrollTrigger;
+
+    this.contentBlocks = this.gsap.utils.toArray('.whyParallax__contentBlock');
   }
 
   init () {
@@ -15,13 +18,13 @@ export class Why {
   setScrollTrigerToAllContentBlocks () {
     this.contentBlocks.forEach((sideBlock, i) => {
       let leftLayout = (i % 2 > 0) ? false : true;
-      let tween = gsap.fromTo(sideBlock, 
+      let tween = this.gsap.fromTo(sideBlock, 
         { yPercent: leftLayout ? 10 : -10
         },
         { yPercent: leftLayout ? -10 : 10,
         });
   
-      ScrollTrigger.create({
+      this.ScrollTrigger.create({
         trigger: '.whyParallax',
         start: 'top bottom',
         end: 'bottom top',

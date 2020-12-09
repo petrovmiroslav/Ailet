@@ -12,5 +12,80 @@
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
   background-color: #0F001E;
-  display: none;
+  transition: transform .75s ease-in-out;
+  transform: translateY(-100%);
+}
+.menu--open {
+  transform: translateY(0);
+}
+.menu__inner {
+  max-width: 1680px;
+  height: 100%;
+  max-height: 570px;
+  margin: auto;
+  padding: 260px 112px 180px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: none;
+  opacity: 0.35;
+}
+.menu__link:hover,
+.menu__link:focus {
+  opacity: 1;
+}
+.menu__link:active {
+  opacity: 0.35;
+}
+.menu__linkIcon {
+  margin: 0 0 0 24px;
+}
+
+.menu__contacts {
+  max-width: 364px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.menu__contact {
+  width: auto;
+  padding: 0 0 48px;
+}
+.menu__contact--padding-0 {
+  padding: 0;
+}
+.menu__contactHeader {
+  margin: 0 0 20px;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.menu__contactText {
+  margin: 0;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #FFFFFF;
+  opacity: 0.35;
 }
