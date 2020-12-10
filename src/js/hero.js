@@ -14,6 +14,7 @@ export class Hero {
 
     this.heroContainer = document.querySelector(".scroll-sections-horisontal");
     this.BGLogo = document.querySelector('.backgoundLogo__img');
+    this.navBarButtons = document.querySelector('.navBar__buttons');
     this.sphereSection = document.querySelector('.sphereSection');
     this.sphereInner = document.querySelector('.sphereSection__inner');
     this.heroSection = document.querySelector('.heroSection');
@@ -58,7 +59,7 @@ export class Hero {
       animation: this.backgroundTimeline,
       scrub: 1,
       start: 'top top',
-      end: () => "+=" + this.heroContainer.offsetWidth,
+      end: () => "+=" + document.documentElement.clientWidth/* this.heroContainer.offsetWidth */,
     });
 
     this.gsap.set(this.BGLogo, {opacity: 0});
@@ -66,8 +67,26 @@ export class Hero {
 
   setUpHorisontalScrollSection () {
 
-    let logosIsChanged = false;
-    function checkProgress ({progress, direction, isActive}) {
+    let logosIsChanged = false,
+    buttonsOn = false;
+
+    function toggleNavBarButtons (progress) {
+      if (buttonsOn) {
+        if (progress < 0.05) {
+          buttonsOn = false;
+          
+          this.navBarButtons.classList.add('navBar__buttons--hidden');
+        }
+      } else {
+        if (progress > 0.05) {
+          buttonsOn = true;
+          
+          this.navBarButtons.classList.remove('navBar__buttons--hidden');
+        }
+      }
+    }
+
+    function toggleNavBarLogo (progress) {
       if (logosIsChanged) {
         if (progress < 0.7) {
           logosIsChanged = false;
@@ -83,6 +102,11 @@ export class Hero {
           this.logoDark.classList.remove('navBar__logo--opacity-0');
         }
       }
+    }
+
+    function checkProgress ({progress, direction, isActive}) {
+      toggleNavBarButtons.call(this, progress);
+      toggleNavBarLogo.call(this, progress);
     }
 
     this.sphereTimeline

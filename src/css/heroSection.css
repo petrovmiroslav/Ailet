@@ -49,9 +49,11 @@
   line-height: 25px;
   color: #0F001E;
 }
-.heroBlockLeft__link {
+.heroBlockLeft__link,
+.heroSection .heroBlockLeft__link {
   width: 280px;
   margin: 0 0 14px;
+  padding: 0;
 }
 
 .heroSection__block--right {

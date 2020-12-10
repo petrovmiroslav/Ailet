@@ -9,6 +9,7 @@ export class Chat {
     this.chat = document.querySelector('.chat');
     this.chatButton = document.querySelector('.navBar__chatButon');
     this.chatCloseButton = document.querySelector('.chat__closeButton');
+    this.chatHomePageLink = document.querySelector('.chat__messageLink');
 
     this.form = document.querySelector('.chat__form');
     this.inputs = document.querySelectorAll('.form__input');
@@ -106,20 +107,22 @@ export class Chat {
   addChatButtonClickListener () {
     this.chatButton.addEventListener('click', this.toggleChat);
     this.chatCloseButton.addEventListener('click', this.toggleChat);
+    this.chatHomePageLink.addEventListener('click', this.toggleChat);
   }
 
   toggleChat () {
     this.toggleChatBlock();
     this.toggleBodyScrollLock();
+    this.hideSubmitMessage();
     this.chatIsOpen = this.chatIsOpen ? false : true;
   }
 
   toggleChatBlock () {
-    this.chat.classList.toggle('chat--open');
+    this.chat.classList.toggle('chat--open', !this.chatIsOpen);
   }
 
   toggleBodyScrollLock () {
-    document.body.classList.toggle('body--scroll-lock');
+    document.body.classList.toggle('body--scroll-lock', !this.chatIsOpen);
   }
 
   inputIsValid (input) {
@@ -157,7 +160,7 @@ export class Chat {
 
     let formIsValid = this.checkAllInputs(this.inputs);
 
-    formIsValid && this.submitForm();
+    formIsValid, 1 && this.submitForm();
   }
 
   checkAllInputs (inputs) {
@@ -183,7 +186,9 @@ export class Chat {
   }
 
   fetchResultHandler (response) {
+    this.displaySubmitMessage();
     if (response.ok) {
+      
       
     } else {
       
@@ -192,6 +197,20 @@ export class Chat {
 
   fetchErrorHandler (error) {
 
+  }
+
+  displaySubmitMessage () {
+    this.chat.classList.add('chat--submit');
+
+    window.setTimeout(this.autoToggleChat.bind(this), 5000);
+  }
+
+  hideSubmitMessage () {
+    this.chat.classList.remove('chat--submit');
+  }
+
+  autoToggleChat (){
+    this.chatIsOpen && this.toggleChat();
   }
 
 }

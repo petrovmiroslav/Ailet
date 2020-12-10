@@ -33,6 +33,11 @@
 }
 .navBar__buttons {
   display: flex;
+  transition: 0.15s ease-in-out;
+}
+.navBar__buttons--hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 .menuButon {
   display: flex;

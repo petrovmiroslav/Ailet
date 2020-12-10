@@ -32,11 +32,11 @@ import '../css/clients.css';
 import {Clients as ClientsModule} from './clients.js';
 import '../css/contacts.css';
 
-/* (function () {
+(function () {
   if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
   }
-})(); */
+})();
 DOMready();
 function DOMready() {
   if (document.readyState != 'loading'){

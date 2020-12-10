@@ -76,7 +76,7 @@ export class Menu {
   }
 
   toggleBodyScrollLock () {
-    document.body.classList.toggle('body--scroll-lock');
+    document.body.classList.toggle('body--scroll-lock', !this.menuIsOpen);
   }
 
   toggleMenuButton () {
