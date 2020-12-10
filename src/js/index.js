@@ -47,8 +47,16 @@ function DOMready() {
 }
 function DOMContentLoaded () {
   document.removeEventListener('DOMContentLoaded', DOMContentLoaded);
-  init();
+  //init();
 };
+
+/* window.addEventListener('load', init); */
+window.addEventListener('load', setBodyClassReady);
+function setBodyClassReady () {
+	document.body.classList.remove('hiddenPopUps');
+}
+
+init();
 
 function init () {
 	const Hero = new HeroModule(gsap, ScrollTrigger);

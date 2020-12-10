@@ -117,7 +117,7 @@ export class HowItWorks {
       end: 'bottom bottom',
       pin: this.LeftContent,
       anticipatePin: 1,
-      /* refreshPriority: -10 */
+      /* refreshPriority: -1 */
     });
   }
 

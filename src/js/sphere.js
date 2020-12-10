@@ -2,8 +2,9 @@ import './modernizr.js';
 
 
 window.addEventListener("load", windowLoadHandler, false);
-var sphereRad = 280;
-var radius_sp=1;
+//var sphereRad = 280;
+var sphereRad;
+var radius_sp;
 
 /* $(function() {
     $( "#slider-range" ).slider({
@@ -57,6 +58,56 @@ function canvasApp() {
 	
 	var theCanvas = document.getElementById("canvasOne");
 	var context = theCanvas.getContext("2d");
+
+	window.requestAnimationFrame(()=>{
+		document.getElementById("canvasOne").classList.add('sphere__canvas--reduced');
+	});
+
+	//setCanvasSize(theCanvas);
+	function setCanvasSize (canvas) {
+		canvas.width = canvas.offsetWidth;
+		canvas.height = canvas.offsetHeight;
+	}
+
+	sphereRad = getSphereRad(theCanvas);
+	radius_sp = 1;
+
+	function getSphereRad (canvas) {
+		//return 280;
+		return Math.min(canvas.offsetWidth * 0.7, canvas.offsetHeight * 0.7);
+		//return Math.min(canvas.offsetWidth * 1.2, canvas.offsetHeight * 1.2);
+	}
+	//reduceRadiusSpd();
+	function reduceRadiusSpd () {
+		/* if (radius_sp < 1) {
+			return radius_sp = 1;
+		}
+		radius_sp = radius_sp * 0.99; */
+		
+		if (sphereRad < 280) {
+			return sphereRad = 280;
+		}
+		sphereRad = sphereRad * 0.99;
+		window.requestAnimationFrame(reduceRadiusSpd);
+	}
+
+	/* window.setTimeout(()=>{
+		sphereRad = 280,sphereRad * 0.8;
+		console.log(sphereRad);
+		window.setTimeout(()=>{
+			sphereRad = 280, sphereRad * 0.8;
+			console.log(sphereRad);
+		},3000);
+	},2000); */
+
+	/* window.setTimeout(()=>{
+		radius_sp = radius_sp * 0.75;
+		console.log(radius_sp); 
+		window.setTimeout(()=>{
+			radius_sp = 1;
+			console.log(radius_sp);
+		},3000);
+	},2000); */
 	
 	var displayWidth;
 	var displayHeight;

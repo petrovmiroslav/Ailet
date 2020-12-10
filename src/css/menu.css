@@ -9,6 +9,7 @@
   left: 0;
   right: 0;
   z-index: 1;
+  overflow: hidden;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
   background-color: #0F001E;
@@ -24,6 +25,8 @@
   max-height: 570px;
   margin: auto;
   padding: 260px 112px 180px;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   justify-content: space-between;
 }

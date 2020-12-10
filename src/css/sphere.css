@@ -1,7 +1,14 @@
 .sphere__canvas {
-  width: 100%;
+  /* height: 100%;
+  width: 100%; */
+  transition: 3s ease-in-out;
+  transform: scale(2.5);
+}
+.sphere__canvas--reduced {
+  transform: scale(1);
 }
 .sphere {
   display: flex;
   align-items: center;
+  justify-content: center;
 }

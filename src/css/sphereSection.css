@@ -11,8 +11,8 @@
 }
 .sphereSection__sphere {
   height: 100%;
+  width: 100%;
 }
-/* ПОДКЛЮЧИТЬ ШРИФТ */
 .sphereSection__header {
   position: absolute;
   margin: auto;

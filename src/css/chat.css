@@ -12,6 +12,10 @@
   transition: transform .75s ease-in-out;
   transform: translateX(100%);
 }
+.hiddenPopUps .chat {
+  opacity: 0;
+  visibility: hidden;
+}
 .chat--open {
   transform: translateX(0);
 }
@@ -42,11 +46,19 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: red;
-  transition: 0.35s ease-in-out;
+
+  background: #127f8a;
+  border-radius: 50%;
+  
+  transition: 0.35s  ease-in-out;
+  transform: translateX(0%);
+}
+.chat--open .chat__sphere {
+  transition: 0.35s 0.4s  ease-in-out;
   transform: translateX(-75%);
 }
-.chat--submit .chat__sphere {
+.chat--submit .chat__sphere { 
+  transition: 0.35s  ease-in-out;
   transform: translateX(0%);
 }
 .chat__messageContainer {

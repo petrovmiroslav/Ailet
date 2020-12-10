@@ -14,7 +14,7 @@ export class Hero {
 
     this.heroContainer = document.querySelector(".scroll-sections-horisontal");
     this.BGLogo = document.querySelector('.backgoundLogo__img');
-    this.navBarButtons = document.querySelector('.navBar__buttons');
+    this.navBarButtons = document.querySelector('.navBar__inner');
     this.sphereSection = document.querySelector('.sphereSection');
     this.sphereInner = document.querySelector('.sphereSection__inner');
     this.heroSection = document.querySelector('.heroSection');
@@ -54,11 +54,12 @@ export class Hero {
 
     this.ScrollTrigger.create({
       trigger: this.heroContainer,
-      pin: this.BGLogo,
+      pin: '.backgoundLogo'/* this.BGLogo */,
       anticipatePin: 1,
       animation: this.backgroundTimeline,
       scrub: 1,
       start: 'top top',
+      /* refreshPriority: -1, */
       end: () => "+=" + document.documentElement.clientWidth/* this.heroContainer.offsetWidth */,
     });
 

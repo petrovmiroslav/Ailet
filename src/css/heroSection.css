@@ -71,6 +71,16 @@
 }
 .heroBlockRight__gradientText {
   margin: 10px 0 0;
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 38px;
+  text-transform: uppercase;
+  background: linear-gradient(135.66deg, #00CDFF 1.13%, #7744D2 41.3%, #FF3C01 70.14%, #FFC700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .heroBlockRight__text {
   font-family: PT Root UI;
