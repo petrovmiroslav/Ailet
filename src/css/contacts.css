@@ -1,6 +1,6 @@
 .contacts {
   position: relative;
-  background: url("../static/contactsBG_2x.png");
+  background: url("../static/contactsBG_2x.jpg");
   background-position-x: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,11 +15,19 @@
 }
 .contacts__inner {
   max-width: 1680px;
+  min-height: 100vh;
   margin: auto;
-  padding: 120px 112px 0;
+  padding: 120px 112px 3%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 .contacts__content {
   max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 .contacts__header {
   margin: 0;
@@ -41,15 +49,15 @@
 }
 
 .contacts__contactsContainer {
-  margin: 104px 0 224px;
+  padding: 32px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .contacts__contact {
-  width: 42%;
   padding: 0 0 75px;
+  flex: 0 324px;
 }
 .contact {
 
@@ -77,11 +85,14 @@
 .contact__text--hightlight {
   font-weight: bold;
   color: #FFFFFF;
+  appearance: none;
+  text-decoration: none;
 }
-
+.contacts__borderTopHeader {
+  margin: 0;
+}
 .footer__borderTopContainer {
   border-top: 2px solid #FFFFFF;
-  padding-bottom: 90px;
 }
 .footer__contentContainer {
   flex-wrap: wrap;
@@ -115,4 +126,40 @@
 }
 .footer__markweberLogo {
   transform: translateY(20%);
+}
+
+
+@media (max-width: 768px) {
+  .contacts__inner {
+    padding: 86px 64px 4%;
+  }
+  .contacts__contactsContainer {
+    padding: 48px 0 0;
+  }
+  .contacts__contact {
+    padding: 0 0 34px;
+  }
+}
+
+@media (max-width: 414px) {
+  .contacts__inner {
+    padding: 38px 12px 6%;
+  }
+  .contacts__headerImg {
+    max-width: 24px;
+    margin: 0 16px 0 0;
+  }
+  .contacts__headerText {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .contact__header {
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .contact__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

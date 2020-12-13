@@ -5,9 +5,12 @@ gsap.registerPlugin(ScrollTrigger); */
 
 
 export class Hero {
-  constructor (gsap, ScrollTrigger) {
+  constructor (gsap, ScrollTrigger, Sphere) {
     this.gsap = gsap;
     this.ScrollTrigger = ScrollTrigger;
+    this.SphereMain = new Sphere(document.getElementById("canvasOne"));
+    
+    
 
     this.backgroundTimeline = this.gsap.timeline();
     this.sphereTimeline = this.gsap.timeline();
@@ -24,9 +27,17 @@ export class Hero {
   }
 
   init () {
+    this.startSphere();
     this.pinNavBar();
-    this.setUpBGLogo();
+    //this.setUpBGLogo();
     this.setUpHorisontalScrollSection();
+  }
+
+  startSphere () {
+    this.SphereMain.start();
+    window.addEventListener('load', ()=>{
+      document.getElementById("canvasOne").classList.add('sphere__canvas--reduced');
+    });
   }
 
   pinNavBar () {
@@ -39,32 +50,32 @@ export class Hero {
     });
   }
 
-  setUpBGLogo () {
-    this.backgroundTimeline
-    .to(
-      this.BGLogo,
-      { opacity: 1,
-        xPercent: 0,
-        duration: 1 })
-      .to(
-        this.BGLogo,
-        { opacity: 1,
-          xPercent: -100,
-          duration: 2 });
+  // setUpBGLogo () {
+  //   this.backgroundTimeline
+  //   .fromTo(
+  //     this.BGLogo,
+  //     { opacity: 0,
+  //       xPercent: 100, },
+  //     { opacity: 1,
+  //       xPercent: 100,
+  //       duration: 1 })
+  //     .to(
+  //       this.BGLogo,
+  //       { opacity: 1,
+  //         xPercent: 0,
+  //         duration: 2 });
 
-    this.ScrollTrigger.create({
-      trigger: this.heroContainer,
-      pin: '.backgoundLogo'/* this.BGLogo */,
-      anticipatePin: 1,
-      animation: this.backgroundTimeline,
-      scrub: 1,
-      start: 'top top',
-      /* refreshPriority: -1, */
-      end: () => "+=" + document.documentElement.clientWidth/* this.heroContainer.offsetWidth */,
-    });
-
-    this.gsap.set(this.BGLogo, {opacity: 0});
-  }
+  //   this.ScrollTrigger.create({
+  //     trigger: this.heroContainer,
+  //     pin: '.backgoundLogo'/* this.BGLogo */,
+  //     anticipatePin: 1,
+  //     animation: this.backgroundTimeline,
+  //     scrub: 1,
+  //     start: 'top top',
+  //     /* refreshPriority: -1, */
+  //     end: () => "+=" + /* document.documentElement.clientWidth */this.heroContainer.offsetWidth,
+  //   });
+  // }
 
   setUpHorisontalScrollSection () {
 
@@ -124,7 +135,21 @@ export class Hero {
         this.sphereInner,
         { xPercent: 25,
           duration: 1 },
-        0);
+        0)
+      .fromTo(
+        this.BGLogo,
+        { opacity: 0,
+          xPercent: 100, },
+        { opacity: 1,
+          xPercent: 50,
+          duration: 1 },
+          0)
+        .to(
+          this.BGLogo,
+          { opacity: 1,
+            xPercent: 0,
+            duration: 3 },
+          1);
 
     this.ScrollTrigger.create({
       trigger: this.heroContainer,
@@ -134,7 +159,13 @@ export class Hero {
       scrub: 1,
       start: 'top top',
       end: () => "+=" + this.heroContainer.offsetWidth,
-      onUpdate: checkProgress.bind(this)
+      onUpdate: checkProgress.bind(this),
+      onLeave: () => { 
+        this.SphereMain.stop();
+      },
+      onEnterBack: () => { 
+        this.SphereMain.start();
+      },
     });
   }
 

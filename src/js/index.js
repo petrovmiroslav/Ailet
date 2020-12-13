@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 import '../css/index.css';
 //import './sphere.js';
+import Sphere from './sphere2.js';
 import {Hero as HeroModule} from './hero.js';
 import '../css/link.css';
 import '../css/sphere.css';
@@ -23,7 +24,8 @@ import {WhatIs as WhatIsModule} from './whatIs.js';
 import '../css/borderTopHeader.css';
 import '../css/trigger.css';
 import '../css/howItWorks.css';
-import {HowItWorks as HowItWorksModule} from './howItWorks.js';
+// import {HowItWorks as HowItWorksModule} from './howItWorks.js';
+import {HowItWorks as HowItWorksModule} from './howItWorks2.js';
 import '../css/solutions.css';
 import {Accordion as AccordionModule} from './accordion.js';
 import '../css/why.css';
@@ -47,31 +49,34 @@ function DOMready() {
 }
 function DOMContentLoaded () {
   document.removeEventListener('DOMContentLoaded', DOMContentLoaded);
-  //init();
+  init();
 };
 
 /* window.addEventListener('load', init); */
 window.addEventListener('load', setBodyClassReady);
 function setBodyClassReady () {
 	document.body.classList.remove('hiddenPopUps');
+	//document.body.classList.add('visiblePopUps');
+	document.querySelector('.page').style.opacity = 1;
 }
 
-init();
+//init();
 
 function init () {
-	const Hero = new HeroModule(gsap, ScrollTrigger);
+
+	const Hero = new HeroModule(gsap, ScrollTrigger, Sphere);
 	Hero.init();
 
-	const Menu = new MenuModule(gsap, ScrollTrigger);
+	const Menu = new MenuModule(gsap, ScrollTrigger, Sphere);
 	Menu.init();
 
-	const Chat = new ChatModule();
+	const Chat = new ChatModule(Sphere);
 	Chat.init();
 
 	const WhatIs = new WhatIsModule(gsap, ScrollTrigger);
 	WhatIs.init();
 
-	const HowItWorks = new HowItWorksModule(gsap, ScrollTrigger);
+	const HowItWorks = new HowItWorksModule(gsap, ScrollTrigger, Sphere);
 	HowItWorks.init();
 
 	const Accordion = new AccordionModule(gsap, ScrollTrigger);
@@ -82,5 +87,4 @@ function init () {
 
 	const Clients = new ClientsModule(gsap, ScrollTrigger);
 	Clients.init();
-	/* document.querySelector('.preloaderCover').style.display = 'none'; */
 }

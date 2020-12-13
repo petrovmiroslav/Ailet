@@ -208,7 +208,8 @@ function canvasApp() {
 		
 		timer = setInterval(onTimer, 10/24);
 	}
-	
+
+		
 	function onTimer() {
 		//if enough time has elapsed, we will add new particles.		
 		count++;

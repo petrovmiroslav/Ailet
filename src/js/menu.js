@@ -3,11 +3,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger); */
 
+import Sphere from "./sphere2";
+
 
 export class Menu {
-  constructor (gsap, ScrollTrigger) {
+  constructor (gsap, ScrollTrigger, Sphere) {
     this.gsap = gsap;
     this.ScrollTrigger = ScrollTrigger;
+    this.SphereMenu = new Sphere(document.getElementById('canvasMenu'));
+    this.SphereON = false;
 
     this.menuIsOpen = false;
     this.menuButton = {
@@ -68,7 +72,18 @@ export class Menu {
     this.toggleMenuButton();
     this.toggleMenuBlock();
     this.toggleBodyScrollLock();
+    this.toggleSphere();  
     this.menuIsOpen = this.menuIsOpen ? false : true;
+  }
+
+  toggleSphere () {
+    if (this.SphereON) {
+      this.SphereMenu.stop();
+      this.SphereON = false;
+      return;  
+    }
+    this.SphereMenu.start();
+    this.SphereON = true;
   }
 
   toggleMenuBlock () {

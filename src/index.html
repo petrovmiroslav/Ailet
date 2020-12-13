@@ -6,9 +6,17 @@
   <title>Ailet</title>
 </head>
 <body class="hiddenPopUps">
+<div class="page" style="opacity: 0;">
+
+  
   <!-- <div class="preloaderCover" style="width: 100%;
 height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;"></div> -->
   <div class="menu">
+    <div class="menu__sphereContainer">
+      <div class="sphere sphereSection__sphere menu__sphere">
+        <canvas class="sphere__canvas sphere__canvas--reduced" id="canvasMenu" width="900" height="520"></canvas>
+      </div>
+    </div>
     <div class="menu__inner">
       <div class="menu__links">
         <a class="menu__link link">about us
@@ -59,10 +67,15 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
     </div>
   </div>
 
+  
   <div class="chat">
     <div class="chat__sphereContainer">
       <div class="chat__sphere">
-
+        <div class="menu__sphereContainer">
+          <div class="sphere sphereSection__sphere menu__sphere">
+            <canvas class="sphere__canvas sphere__canvas--reduced" id="canvasChat" width="900" height="520"></canvas>
+          </div>
+        </div>
       </div>
     </div>
     <div class="chat__messageContainer">
@@ -70,9 +83,15 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
         <h2 class="chat__messageHeader">Thank you, your application has been sent</h2>
         <a class="trigger__link link form__label--button chat__messageLink">
           <div class="trigger__linkTextContainer">
-            <span class="trigger__linkText form__submitText">Home page</span>
-            <span class="trigger__linkText form__submitText">Home page</span>
-            <span class="trigger__linkText form__submitText">Home page</span>
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText form__submitText">Home page</span>
+            </div>
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText form__submitText">Home page</span>
+            </div>
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText form__submitText">Home page</span>
+            </div>
           </div>
         </a>
       </div>
@@ -171,26 +190,34 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
               <label for="message" class="form__label form__label--placeholder">Message</label>
             </div>
 
-            <div class="form__inputContainer form__inputContainer--column-2">
-              <input type="submit" id="submit" value="submit" class="input form__input form__input--submit visuallyhidden">
-              <label for="submit" class="trigger__link link form__label form__label--button">
-                <div class="trigger__linkTextContainer">
-                  <span class="trigger__linkText form__submitText">Send</span>
-                  <span class="trigger__linkText form__submitText">Send</span>
-                  <span class="trigger__linkText form__submitText">Send</span>
-                </div>
-              </label>
-            </div>
-
-            <div class="form__inputContainer form__inputContainer--column-2">
-              <input type="checkbox" id="dataSubmission" name="dataSubmission" checked class="input form__input visuallyhidden">
-              <label for="dataSubmission" class="link form__label form__label--checkbox">
-                <div class="form__checkbox">
-                  <div class="form__checkboxCircleInner">
+            <div class="form__container form__container--column form__container--column-reverse">
+              <div class="form__inputContainer form__inputContainer--column-2">
+                <input type="submit" id="submit" value="submit" class="input form__input form__input--submit visuallyhidden">
+                <label for="submit" class="trigger__link link form__label form__label--button">
+                  <div class="trigger__linkTextContainer">
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText form__submitText">Send</span>
+                    </div>
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText form__submitText">Send</span>
+                    </div>
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText form__submitText">Send</span>
+                    </div>
                   </div>
-                </div>
-                <span class="form__checkboxText">I give on data submission</span>
-              </label>
+                </label>
+              </div>
+  
+              <div class="form__inputContainer form__inputContainer--column-2">
+                <input type="checkbox" id="dataSubmission" name="dataSubmission" checked class="input form__input visuallyhidden">
+                <label for="dataSubmission" class="link form__label form__label--checkbox">
+                  <div class="form__checkbox">
+                    <div class="form__checkboxCircleInner">
+                    </div>
+                  </div>
+                  <span class="form__checkboxText">I give on data submission</span>
+                </label>
+              </div>
             </div>
           </div>
         </form>
@@ -223,9 +250,6 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
     </div>
   </div>
 
-  <div class="backgoundLogo">
-    <img class="backgoundLogo__img" src="./static/BG--big.svg" alt="Ailet logotype">
-  </div>
   
   <div class="scroll-sections-horisontal">
 
@@ -239,7 +263,13 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
     </div>
 
     <section class="heroSection panel scroll-sections-horisontal__panel">
-      <div class="heroSection__BG"></div>
+      <div class="backgoundLogo">
+        <svg class="backgoundLogo__img heroSection__backgoundLogoImg" viewBox="0 0 1305 1384" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M333.099 1383.54C274.921 1383.54 215.989 1367.85 162.433 1334.81C4.37814 1237.45 -47.2184 1026.48 47.2831 863.565L640.819 -160.231C701.006 -264.008 809.676 -327.549 926.986 -327.549C1044.3 -327.549 1152.97 -264.008 1213.15 -160.231L1806.74 863.565C1901.19 1026.48 1849.64 1237.45 1691.59 1334.81C1533.53 1432.27 1328.86 1379.09 1234.4 1216.12L926.986 685.941L619.567 1216.12C557.169 1323.83 446.541 1383.54 333.099 1383.54Z" fill="#F7F7F7"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1435.33 705.193C1435.33 428.194 1207.74 203.654 926.976 203.654C646.213 203.654 418.622 428.194 418.622 705.193C418.622 982.191 646.213 1206.73 926.976 1206.73C1207.74 1206.73 1435.33 982.191 1435.33 705.193Z" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1196.37 704.955C1196.37 558.304 1075.89 439.434 927.245 439.434C778.601 439.434 658.116 558.304 658.116 704.955C658.116 851.605 778.601 970.475 927.245 970.475C1075.89 970.475 1196.37 851.605 1196.37 704.955Z" fill="#F7F7F7"/>
+        </svg>          
+      </div>
       <div class="heroSection__inner">
         <div class="heroSection__block heroSection__block--left heroBlockLeft">
           <div class="heroBlockLeft__content">
@@ -248,9 +278,15 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
           </div>
           <a class="trigger__link link form__label--button chat__messageLink heroBlockLeft__link">
             <div class="trigger__linkTextContainer">
-              <span class="trigger__linkText form__submitText">Make your store perfect</span>
-              <span class="trigger__linkText form__submitText">Make your store perfect</span>
-              <span class="trigger__linkText form__submitText">Make your store perfect</span>
+              <div class="trigger__linkTextLayout">
+                <span class="trigger__linkText form__submitText">Make your store perfect</span>
+              </div>
+              <div class="trigger__linkTextLayout">
+                <span class="trigger__linkText form__submitText">Make your store perfect</span>
+              </div>
+              <div class="trigger__linkTextLayout">
+                <span class="trigger__linkText form__submitText">Make your store perfect</span>
+              </div>
             </div>
           </a>
         </div>
@@ -274,20 +310,24 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
           </div>
         </div>
       </div>
+
+      <div class="heroSection__borderTopHeaderContainer">
+        <div class="whatIsBlock__dollarSection borderTopHeader">
+          <div class="borderTopHeader__content">
+            <div class="borderTopHeader__headerAndIcon">
+              <h2 class="borderTopHeader__header">Everyday CPG companes face billion dollar questions</h2>
+              <span class="borderTopHeader__icon">$</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 
 
   <div class='whatIsBlock'>
     <div class="whatIsBlock__inner">
-      <div class="whatIsBlock__dollarSection borderTopHeader">
-        <div class="borderTopHeader__content">
-          <div class="borderTopHeader__headerAndIcon">
-            <h2 class="borderTopHeader__header">Everyday CPG companes face billion dollar questions</h2>
-            <span class="borderTopHeader__icon">$</span>
-          </div>
-        </div>
-      </div>
+
 
       <div class="whatIsBlock__sliderSection">
         <div class="whatIsBlock__sliderInner">
@@ -325,9 +365,15 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
               <div class="whatIsBlock__linkContainer">
                 <a class="howItWorks__link trigger__link link">
                   <div class="trigger__linkTextContainer">
-                    <span class="trigger__linkText">Request a demo</span>
-                    <span class="trigger__linkText">Request a demo</span>
-                    <span class="trigger__linkText">Request a demo</span>
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText">Request a demo</span>
+                    </div>
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText">Request a demo</span>
+                    </div>
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText">Request a demo</span>
+                    </div>
                   </div>
                 </a>
               </div>
@@ -342,24 +388,24 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
   <div class='howItWorks'>
     <div class="howItWorks__topGradient"></div>
     <div class='howItWorks__inner'>
-      <div class="ST__Container">
-        <div class="ST__contentContainer--left">
+      <!-- <div class="ST__Container ST__Container--desktop">
+        <div class="ST__contentContainer ST__contentContainer--left">
           <div class="howItWorks__sphere">
           </div>
           <div class="ST__stageImgContainer">
-            <img class="ST__stageImg howItWorks__stageImg howItWorks__stageImg--translate-right" src="./static/stageImg-1_2x.png" alt="Take a photo in store using IR application">
+            <img class="ST__stageImg howItWorks__stageImg howItWorks__stageImg--translate-right" src="./static/stageImg-1_1x.png" alt="Take a photo in store using IR application">
           </div>
           <div class="ST__stageImgContainer">
-            <img class="ST__stageImg howItWorks__stageImg" src="./static/stageImg-2_2x.png" alt="Images are recognized quickly and report 
+            <img class="ST__stageImg howItWorks__stageImg" src="./static/stageImg-2_1x.png" alt="Images are recognized quickly and report 
             is generated">
           </div>
         </div>
 
-        <div class="ST__contentContainer--stage howItWorks__contentContainer--stage">
+        <div class="ST__contentContainer ST__contentContainer--stage howItWorks__contentContainer--stage">
           <h3 class="howItWorks__stageIndicatorHeader">Ailet AI</h3>
         </div>
 
-        <div class="ST__contentContainer--right howItWorks__contentContainer--right">
+        <div class="ST__contentContainer ST__contentContainer--right howItWorks__contentContainer--right">
           <div class="ST__contentBlock--right howItWorks__contentBlock--right">
             <div class="howItWorks__stageContent">
               <h2 class="howItWorks__stageHeader howItWorks__stageHeader--big">How solution works?</h2>
@@ -380,14 +426,71 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
             </div>
           </div>
         </div>
+      </div> -->
+
+      <div class="ST__Container ST__Container--mobile">
+        <div class="ST__contentContainer ST__contentContainer--fixed">
+          <div class="ST__contentblock--mobile--left">
+            <div class="ST__sphereContainer ST__sphereContainer--mobile">
+              <div class="howItWorks__sphere">
+                <canvas class="sphere__canvas sphere__canvas--reduced" id="canvasHowItWorks" width="900" height="520"></canvas>
+              </div>
+              <div class="ST__stageImgContainer ST__stageImgContainer--mobile">
+                <img class="ST__stageImg howItWorks__stageImg" src="./static/stageImg-1_1x.png" alt="Take a photo in store using IR application">
+              </div>
+              <div class="ST__stageImgContainer ST__stageImgContainer--mobile">
+                <img class="ST__stageImg howItWorks__stageImg howItWorks__stageImg--translate-left" src="./static/stageImg-2_1x.png" alt="Images are recognized quickly and report 
+                is generated">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="ST__contentblock--mobile--right">
+            <div class="ST__stageIndicatorsContainer">
+              <h3 class="howItWorks__stageIndicatorHeader howItWorks__stageIndicatorHeader--mobile howItWorks__stageIndicatorHeader--inFlow">Ailet AI</h3>
+              <h3 class="howItWorks__stageIndicatorHeader howItWorks__stageIndicatorHeader--mobile">Stage 1</h3>
+              <h3 class="howItWorks__stageIndicatorHeader howItWorks__stageIndicatorHeader--mobile">Stage 2</h3>
+            </div>
+  
+            <div class="ST__contentContainer ST__blocksContainer">
+              <div class="ST__contentBlock--mobile howItWorks__contentBlock--mobile">
+                <div class="howItWorks__stageContent">
+                  <h2 class="howItWorks__stageHeader howItWorks__stageHeader--big">How solution works?</h2>
+                  <p class="howItWorks__stageText howItWorks__stageText--white">Save time&reduce costs while up-lift your sales</p>
+                </div>
+              </div>
+              <div class="ST__contentBlock--mobile howItWorks__contentBlock--mobile">
+                <div class="howItWorks__stageContent">
+                  <h2 class="howItWorks__stageHeader">Take a photo in store using IR application</h2>
+                  <p class="howItWorks__stageText">Shelf photos taken by your reps are uploaded to the cloud, where AI converts them accurately and instantly into shelf data (product, price, promotion, placement)</p>
+                </div>
+              </div>
+              <div class="ST__contentBlock--mobile howItWorks__contentBlock--mobile">
+                <div class="howItWorks__stageContent">
+                  <h2 class="howItWorks__stageHeader">Images are recognized quickly and report 
+                    is generated</h2>
+                  <p class="howItWorks__stageText">Best shelf activity information is communicated to locations in real time, and instant visibility of in-store retail is made available to corporate customers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
       </div>
 
       <div class="howItWorks__linkContainer">
         <a class="howItWorks__link trigger__link link">
           <div class="trigger__linkTextContainer">
-            <span class="trigger__linkText">We have more to say about our technologies</span>
-            <span class="trigger__linkText">We have more to say about our technologies</span>
-            <span class="trigger__linkText">We have more to say about our technologies</span>
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText">We have more to say about our technologies</span>
+            </div>
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText">We have more to say about our technologies</span>
+            </div>
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText">We have more to say about our technologies</span>
+            </div>
           </div>
         </a>
       </div>
@@ -410,16 +513,16 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
       <div class="accordionSection">
         <div class="accordionSection__imagesContainer">
           <div class="accordionSection__imgContainer">
-            <img class="accordionSection__img" src="./static/accordion__block_img_1_2x.png" alt="Ailet mobile app capabilities">
+            <img class="accordionSection__img" src="./static/accordion__block_img_1_2x.jpg" alt="Ailet mobile app capabilities">
           </div>
           <div class="accordionSection__imgContainer">
-            <img class="accordionSection__img" src="./static/accordion__block_img_2_2x.png" alt="AI Driven Data Management platform">
+            <img class="accordionSection__img" src="./static/accordion__block_img_2_2x.jpg" alt="AI Driven Data Management platform">
           </div>
           <div class="accordionSection__imgContainer">
-            <img class="accordionSection__img" src="./static/accordion__block_img_3_2x.png" alt="API & DeepLink integration (Our solution can be seamlessly integrated in 1 week into any Salesforce Automation Platform)">
+            <img class="accordionSection__img" src="./static/accordion__block_img_3_2x.jpg" alt="API & DeepLink integration (Our solution can be seamlessly integrated in 1 week into any Salesforce Automation Platform)">
           </div>
           <div class="accordionSection__imgContainer">
-            <img class="accordionSection__img" src="./static/accordion__block_img_4_2x.png" alt="Data visualization platform - Fast Business Intelligence Platform to visualize any Retail Execution Process and provide Actionable Dashboards">
+            <img class="accordionSection__img" src="./static/accordion__block_img_4_2x.jpg" alt="Data visualization platform - Fast Business Intelligence Platform to visualize any Retail Execution Process and provide Actionable Dashboards">
           </div>
         </div>
         <div class="accordionSection__accordion accordion">
@@ -507,6 +610,7 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
       </div>
     </div>
   </div>
+
 
   <div class='why' id="Why">
     <div class="backgoundLogo">
@@ -618,6 +722,7 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
     </div>
   </div>
 
+
   <div class="clients">
     <div class="clients__inner">
       <div class="borderTopHeader clients__borderTopHeader">
@@ -649,9 +754,15 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
         <img class="clients__logoImg" src="./static/clientLogo1_2x.png" alt="Ailet client logo">
         <img class="clients__logoImg" src="./static/clientLogo2_2x.png" alt="Ailet client logo">
         <img class="clients__logoImg" src="./static/clientLogo3_2x.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="./static/clientLogo1_2x.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="./static/clientLogo2_2x.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="./static/clientLogo3_2x.png" alt="Ailet client logo">
       </div>
 
       <div class="clients__parallaxBlock">
+        <img class="clients__logoImg" src="./static/clientLogo4_2x.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="./static/clientLogo5_2x.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="./static/clientLogo6_2x.png" alt="Ailet client logo">
         <img class="clients__logoImg" src="./static/clientLogo4_2x.png" alt="Ailet client logo">
         <img class="clients__logoImg" src="./static/clientLogo5_2x.png" alt="Ailet client logo">
         <img class="clients__logoImg" src="./static/clientLogo6_2x.png" alt="Ailet client logo">
@@ -675,9 +786,15 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
           <div class="whatIsBlock__linkContainer">
             <a class="howItWorks__link trigger__link link">
               <div class="trigger__linkTextContainer">
-                <span class="trigger__linkText">Get in touch</span>
-                <span class="trigger__linkText">Get in touch</span>
-                <span class="trigger__linkText">Get in touch</span>
+                <div class="trigger__linkTextLayout">
+                  <span class="trigger__linkText">Get in touch</span>
+                </div>
+                <div class="trigger__linkTextLayout">
+                  <span class="trigger__linkText">Get in touch</span>
+                </div>
+                <div class="trigger__linkTextLayout">
+                  <span class="trigger__linkText">Get in touch</span>
+                </div>
               </div>
             </a>
           </div>
@@ -721,7 +838,7 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
           </div>
         </div>
 
-        <div class="borderTopHeader">
+        <div class="borderTopHeader contacts__borderTopHeader">
           <div class="borderTopHeader__content footer__borderTopContainer">
             <div class="borderTopHeader__headerAndIcon footer__contentContainer">
               <p class="borderTopHeader__header footer__text footer__text--layout-left">© ООО «Ailet», 2020</p>
@@ -737,5 +854,6 @@ height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;">
       </div>
     </div>
   </div>
+</div>
 </body>
 </html>

@@ -3,7 +3,10 @@ import "choices.js/public/assets/styles/choices.min.css";
 import validator from 'validator';
 
 export class Chat {
-  constructor () {
+  constructor (Sphere) {
+    this.SphereChat = new Sphere(document.getElementById('canvasChat'));
+    this.SphereON = false;
+
     this.chatIsOpen = false;
 
     this.chat = document.querySelector('.chat');
@@ -110,10 +113,21 @@ export class Chat {
     this.chatHomePageLink.addEventListener('click', this.toggleChat);
   }
 
+  toggleSphere () {
+    if (this.SphereON) {
+      this.SphereChat.stop();
+      this.SphereON = false;
+      return;  
+    }
+    this.SphereChat.start();
+    this.SphereON = true;
+  }
+
   toggleChat () {
     this.toggleChatBlock();
     this.toggleBodyScrollLock();
     this.hideSubmitMessage();
+    this.toggleSphere();
     this.chatIsOpen = this.chatIsOpen ? false : true;
   }
 
@@ -160,7 +174,7 @@ export class Chat {
 
     let formIsValid = this.checkAllInputs(this.inputs);
 
-    formIsValid, 1 && this.submitForm();
+    formIsValid && this.submitForm();
   }
 
   checkAllInputs (inputs) {
@@ -186,9 +200,9 @@ export class Chat {
   }
 
   fetchResultHandler (response) {
+    /* put in response.ok!!!!!!!!!!! */
     this.displaySubmitMessage();
     if (response.ok) {
-      
       
     } else {
       

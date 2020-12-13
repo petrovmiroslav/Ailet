@@ -48,12 +48,40 @@
 }
 .borderTopHeader__block {
   width: 49%;
-  display: inline-block;
   padding: 0 150px 0 0;
+  display: inline-block;
+  vertical-align: top;
   box-sizing: border-box;
 }
 .borderTopHeader__blockText {
   font-size: 20px;
   line-height: 25px;
   color: #0F001E;
+}
+
+
+@media (max-width: 768px) {
+  .borderTopHeader__block {
+    padding: 0 42px 0 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .borderTopHeader__block {
+    width: 100%;
+    padding: 0;
+  }
+  .borderTopHeader__header, .borderTopHeader__icon, .borderTopHeader__blockText {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .borderTopHeader__content {
+    padding: 24px 0 0;
+  }
+  .borderTopHeader__content--paddingTop-big {
+    padding: 24px 0 0;
+  }
+  .borderTopHeader__header--orange {
+    font-size: 30px;
+  }
 }

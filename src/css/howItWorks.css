@@ -1,4 +1,5 @@
 .howItWorks {
+  overflow: hidden;
   background-color: #0F001E;
 }
 .howItWorks__topGradient {
@@ -8,6 +9,7 @@
   background: linear-gradient(82.55deg, rgba(0, 205, 255, 0.6) 0%, rgba(119, 68, 210, 0.6) 39.1%, rgba(255, 60, 1, 0.6) 67.17%, rgba(255, 199, 0, 0.6) 96.24%);
   filter: blur(104px);
   transform: rotate(-180deg);
+  z-index: 1;
 }
 .howItWorks__inner {
   max-width: 1680px;
@@ -24,7 +26,9 @@
   width: 100%;
   position: relative;
 }
-
+.ST__contentContainer {
+  position: relative;
+}
 .ST__contentContainer--stage {
   width: 50%;
   height: 146px;
@@ -44,14 +48,18 @@
   height: 100vh;
 }
 .howItWorks__sphere {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .ST__stageImgContainer {
   width: 100%;
@@ -96,8 +104,8 @@
 .howItWorks__stageImg {
   max-width: 112%;
 }
-.howItWorks__stageImg--translate-right {
-  transform: translateX(4%);
+.howItWorks__stageImg--translate-left {
+  transform: translateX(-4%);
 }
 .howItWorks__contentContainer--right {
 }
@@ -148,4 +156,162 @@
 }
 .howItWorks__link {
   margin: 14px auto 0;
+}
+
+
+.ST__Container--mobile {
+  display: none;
+  height: 100vh;
+}
+.ST__contentContainer--fixed {
+  height: 100%;
+  /* overflow: hidden; */
+}
+.ST__sphereContainer--mobile {
+  height: 100%;
+  position: relative;
+}
+.ST__stageIndicatorsContainer {
+  position: relative;
+}
+.howItWorks__stageIndicatorHeader--mobile {
+  position: absolute;
+  top: 0;
+}
+.howItWorks__stageIndicatorHeader--inFlow {
+  position: relative;
+}
+.ST__stageImgContainer--mobile {
+  height: 80%;
+}
+.howItWorks__contentBlock--mobile {
+  position: absolute;
+}
+
+.ST__contentContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.ST__contentblock--mobile--left {
+  height: 100%;
+  width: 50%;
+}
+.ST__contentblock--mobile--right {
+  width: 38%;
+}
+
+/***/
+.ST__Container--desktop {
+  display: none;
+}
+.ST__Container--mobile {
+  display: block;
+}
+/**/
+.ST__stageIndicatorsContainer {
+  position: absolute;
+  margin: 75px 0 0;
+  z-index: 1;
+}
+.ST__blocksContainer {
+  height: 100%;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .howItWorks__inner {
+    padding: 0 112px 68px;
+  }
+  .ST__Container--desktop {
+    display: none;
+  }
+  .ST__Container--mobile {
+    display: block;
+  }
+
+
+  .ST__contentContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .ST__contentblock--mobile--left {
+    width: 100%;
+    height: 50%;
+  }
+  .ST__contentblock--mobile--right {
+  width: 100%;
+  }
+  .ST__stageIndicatorsContainer {
+    position: relative;
+    margin: 0 0 26px;
+    z-index: auto;
+  }
+  .ST__blocksContainer {
+    height: auto;
+    align-items: flex-start;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .howItWorks__inner {
+    padding: 0 64px 68px;
+  }
+  .howItWorks__stageHeader {
+    max-width: 100%;
+  }
+  .howItWorks__stageText--white {
+    max-width: 100%;
+  }
+  .howItWorks__stageText {
+    max-width: 100%;
+  }
+  .howItWorks__sphere {
+    height: 150%;
+  }
+}
+@media (max-width: 414px) {
+  .howItWorks__inner {
+    padding: 0 12px 68px;
+  }
+  .howItWorks__stageHeader--big {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .howItWorks__stageHeader {
+    line-height: 26px;
+    font-size: 24px;
+  }
+  .howItWorks__stageText {
+    margin: 16px 0 0;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+
+@media (max-width: 768px) and (max-height: 768px) {
+  .ST__stageIndicatorsContainer {
+    margin: 0 0 12px;
+  }
+  .howItWorks__stageIndicatorHeader {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .howItWorks__stageHeader {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .howItWorks__stageHeader--big {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .howItWorks__stageText {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .howItWorks__stageText--white {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }

@@ -2,7 +2,7 @@
   background: url('../static/BG--trigger.svg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-color: #7744D2;
   border-radius: 7px;
 }
@@ -50,13 +50,19 @@
 .trigger__link:hover .trigger__linkTextContainer {
   transform: translateY(-200%);
 }
-
-.trigger__linkText {
+.trigger__linkTextLayout {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+}
+.trigger__linkText {
+  display: block;
+  pointer-events: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   font-family: PT Root UI;
   font-style: normal;
   font-weight: bold;
@@ -66,4 +72,35 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+}
+
+
+@media (max-width: 768px) {
+  .trigger {
+    background-size: contain;
+  }
+  .trigger__inner {
+    padding: 64px 32px;
+  }
+}
+
+@media (max-width: 414px) {
+  .trigger__inner {
+    padding: 80px 8px;
+  }
+  .trigger__header {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .trigger__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  /* .trigger__linkText {
+    background: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: black;
+    color: black;
+  } */
 }

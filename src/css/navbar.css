@@ -2,10 +2,9 @@
 
 }
 .navBar__inner {
-  height: 110px;
   width: 100%;
   max-width: 1680px;
-  padding: 0 112px;
+  padding: 46px 112px 0;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -96,17 +95,47 @@
   /* background: url("../static/chatLogo--gradient.svg" ); */
 }
 .navBar__buttonsGap {
-  width: 20vw;
+  width: 12vw;
   min-width: 20px;
   max-width: 197px;
 }
 .scroll-sections-horisontal__navBar {
   position: absolute;
-  top: 26px;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 1;
   width: 100%;
   max-width: 1680px;
   margin: auto;
+}
+
+
+@media (max-width: 768px) {
+  .navBar__inner {
+    padding: 46px 64px 0;
+  }
+  .navBar__logosContainer {
+    height: 56px;
+  }
+  .navBar__chatButon {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 414px) {
+  .scroll-sections-horisontal__navBar {
+    top: 0;
+  }
+  .navBar__inner {
+    padding: 12px;
+  }
+  .navBar__logosContainer {
+    height: 42px;
+  }
+  .navBar__chatButon {
+    width: 42px;
+    height: 42px;
+  }
 }

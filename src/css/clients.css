@@ -16,17 +16,42 @@
 }
 .clients__parallaxBlock {
   height: 92px;
-  width: 200%;
   width: 200vw;
   padding: 50px 0;
   display: flex;
+  align-items: center;
 }
 .clients__logoImg {
-  max-width: 50%;
+  max-width: 8%;
   max-height: 100%;
-  padding: 0 46px;
+  padding: 0 1%;
 }
 
 .clients__triggerInner {
   max-width: 600px;
+}
+
+@media (max-width: 1280px) {
+  .clients__inner {
+    padding: 128px 112px 128px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clients__inner {
+    padding: 86px 64px 64px;
+  }
+  .clients__parallaxBlock {
+    padding: 24px 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .clients__inner {
+    padding: 86px 12px 64px;
+  }
+  .clients__logoImg {
+    max-width: 16%;
+    padding: 0 2%;
+  }
 }

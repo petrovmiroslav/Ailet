@@ -1,10 +1,11 @@
 .whatIsBlock {
   position: relative;
+  overflow: hidden;
 }
 .whatIsBlock__inner {
   max-width: 1680px;
   margin: auto;
-  padding: 186px 112px 166px;
+  padding: 0 112px 166px;
 }
 .whatIsBlock__dollarSection {
   
@@ -15,7 +16,6 @@
 }
 .whatIsBlock__sliderInner {
   padding: 176px 0 176px;
-  overflow: hidden;
   text-align: center;
   background: url("../static/BG--question.svg");
   background-repeat: no-repeat;
@@ -46,4 +46,66 @@
 
 .whatIsBlock__triggerSectionInner {
   padding: 86px 0 0;
+}
+
+
+@media (max-width: 1280px) {
+  .whatIsBlock__sliderHeader {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .whatIsBlock__sliderHeader {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whatIsBlock__inner {
+    padding: 0 64px 166px;
+  }
+  .whatIsBlock__sliderInner {
+    padding: 128px 0 128px;
+    background-size: contain;
+  }
+  .whatIsBlock__sliderHeader {
+    margin: 42px 0;
+    font-size: 36px;
+    line-height: 38px;
+  }
+  .borderTopHeader__header, .borderTopHeader__icon, .borderTopHeader__blockText {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 414px) {
+  .whatIsBlock__inner {
+    padding: 0 12px 86px;
+  }
+  .whatIsBlock__sliderInner  {
+    padding: 86px 0;
+  }
+  .whatIsBlock__sliderHeader {
+    margin: 32px 0;
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 375px) {
+  .whatIsBlock__sliderHeader {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 320px) {
+  .whatIsBlock__sliderInner {
+    padding: 64px 0;
+  }
+  .whatIsBlock__sliderHeader {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

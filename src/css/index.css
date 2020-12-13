@@ -36,12 +36,19 @@
 		url('../static/fonts/PT Root UI_Light.woff2') format('woff2'), 
 		url('../static/fonts/PT Root UI_Light.woff') format('woff');
 }
+
 html, body, #root, .app {
-	width: 100%;
+  width: 100%;
+  
 }
 body {
   min-height: 100%;
+  width: 100%;
   margin: 0;
+  box-sizing: border-box;
+  background-color: #0F001E;
+}
+.page {
   background-color: #FFFFFF;
 }
 .visuallyhidden {
@@ -89,17 +96,7 @@ body {
 .input:focus {
   outline: none;
 }
-
-
-.backgoundLogo {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  overflow: hidden;
-}
-.backgoundLogo__img {
-  max-width: 100%;
-  margin: 0 0 0 auto;
-  display: block;
-  transform: translateX(100%);
+a[href^="tel"] {
+  color: inherit;
+  text-decoration: none;
 }

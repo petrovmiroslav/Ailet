@@ -9,6 +9,8 @@ export class WhatIs {
     this.ScrollTrigger = ScrollTrigger;
 
     this.headers = this.gsap.utils.toArray('.whatIsBlock__sliderHeader');
+
+    this.xTransform = 5;
   }
 
   init () {
@@ -17,9 +19,9 @@ export class WhatIs {
 
   getTween (element, isLeftLayout) {
     return this.gsap.fromTo(element, 
-      { xPercent: isLeftLayout ? -10 : 10
+      { xPercent: isLeftLayout ? -this.xTransform : this.xTransform
       },
-      { xPercent: isLeftLayout ? 10 : -10,
+      { xPercent: isLeftLayout ? this.xTransform : -this.xTransform,
       });
   }
 
