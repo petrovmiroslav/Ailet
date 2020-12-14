@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./favicon.ico"/>
+  <title>Ailet</title>
+</head>
+<body class="hiddenPopUps">
+<div class="page" style="opacity: 0;">
+
+  
+  <!-- <div class="preloaderCover" style="width: 100%;
+height: 100%;position: absolute;top: 0;z-index: 99; background-color: #0F001E;"></div> -->
+  <div class="menu">
+    <div class="menu__sphereContainer">
+      <div class="sphere sphereSection__sphere menu__sphere">
+        <canvas class="sphere__canvas sphere__canvas--reduced" id="canvasMenu" width="900" height="520"></canvas>
+      </div>
+    </div>
+    <div class="menu__inner">
+      <div class="menu__links">
+        <a href="#" class="menu__link link">about us
+          <svg class="menu__linkIcon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.3341 0V2.22859H22.3162L7.23885 17.3059L8.81465 18.8818L23.7465 3.94997V10.7714H25.975V0H15.3341Z" fill="white"/>
+          <path d="M23.7714 14.1818V23.7714H2.22859V2.22859H11.2273V0H0V26H26V14.1818H23.7714Z" fill="white"/>
+          </svg>
+        </a>
+        <a href="#" class="menu__link link">What we do
+          <svg class="menu__linkIcon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.3341 0V2.22859H22.3162L7.23885 17.3059L8.81465 18.8818L23.7465 3.94997V10.7714H25.975V0H15.3341Z" fill="white"/>
+          <path d="M23.7714 14.1818V23.7714H2.22859V2.22859H11.2273V0H0V26H26V14.1818H23.7714Z" fill="white"/>
+          </svg>
+        </a>
+        <a class="menu__link menu__link--anchor link" href="#Solution">Solution overview</a>
+        <a class="menu__link menu__link--anchor link" href="#Why">Why ailet?</a>
+        <a class="menu__link menu__link--anchor link" href="#Partners">Trusted Partners</a>
+        <a class="menu__link menu__link--anchor link" href="#Contacts">Contacts</a>
+      </div>
+
+      <div class="menu__contacts">
+        <div class="contact menu__contact">
+          <h3 class="menu__contactHeader">US HQ</h3>
+          <p class="menu__contactText">9 The Green, Ste A, City of Dover County of Kent, zip code 19901, Delaware, the United States of America</p>
+          <p class="menu__contactText">
+          tel: +1 (302) 608-9033</p>
+        </div>
+
+        <div class="contact menu__contact">
+          <h3 class="menu__contactHeader">Office EU</h3>
+          <p class="menu__contactText">Pasilankatu 2, 00240 Helsinki, Finland +358 (0) 9 3158 9580</p>
+        </div>
+
+        <div class="contact menu__contact">
+          <h3 class="menu__contactHeader">Office Turkey & Middle East</h3>
+          <h3 class="menu__contactHeader">Office Brazil & Latin America</h3>
+        </div>
+
+        <div class="contact menu__contact menu__contact--padding-0">
+          <h3 class="menu__contactHeader">R&D Office Moscow</h3>
+          <p class="menu__contactText">143026, Moscow, Bolshoy boulevard 42/1, Skolkovo center territory
+          </p>
+          <p class="menu__contactText">
+            tel: +7 (499) 550-34-63</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="chat">
+    <div class="chat__sphereContainer">
+      <div class="chat__sphere">
+        <div class="menu__sphereContainer">
+          <div class="sphere sphereSection__sphere menu__sphere">
+            <canvas class="sphere__canvas sphere__canvas--reduced" id="canvasChat" width="900" height="520"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat__messageContainer">
+      <div class="chat__message">
+        <h2 class="chat__messageHeader">Thank you, your application has been sent</h2>
+        <a href="#" class="trigger__link link form__label--button chat__messageLink">
+          <div class="trigger__linkTextContainer">
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText form__submitText">Home page</span>
+            </div>
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText form__submitText">Home page</span>
+            </div>
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText form__submitText">Home page</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="chat__inner">
+      <button class="chat__closeButton button">
+        <svg class="chat__closeButtonIcon" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.5" d="M16.0258 2.43717L14.4117 0.758789L8.01288 7.41279L1.61402 0.758789L0 2.43717L6.39886 9.09117L0 15.7452L1.61402 17.4236L8.01288 10.7696L14.4117 17.4236L16.0258 15.7452L9.6269 9.09117L16.0258 2.43717Z" fill="white"/>
+        </svg>
+      </button>
+      
+      <div class="chat__layout">
+        <h2 class="chat__header">How can we help you?</h2>
+        <form method="POST" action="" class="chat__form form">
+          <div class="form__container form__container--column">
+            <div class="form__inputContainer form__inputContainer--column-2">
+              <input type="text" name="firstName" id="firstName" class="input form__input" required="">
+              <label for="firstName" class="form__label form__label--placeholder">First name</label>
+              <p class="form__errorMessage">Please enter your first name</p>
+            </div>
+
+            <div class="form__inputContainer form__inputContainer--column-2">
+              <input type="text" name="jobTitle" id="jobTitle" class="input form__input">
+              <label for="jobTitle" class="form__label form__label--placeholder">Job title</label>
+            </div>
+
+            <div class="form__inputContainer form__inputContainer--column-2">
+              <input type="email" name="email" id="email" class="input form__input" required="">
+              <label for="email" class="form__label form__label--placeholder">E-mail</label>
+              <p class="form__errorMessage">Please enter your email</p>
+            </div>
+
+            <div class="form__inputContainer form__inputContainer--column-2">
+              <input type="text" name="companyName" id="companyName" class="input form__input">
+              <label for="companyName" class="form__label form__label--placeholder">Company name</label>
+            </div>
+
+            <div class="form__inputContainer form__inputContainer--column-2">
+              <input type="tel" name="phoneNumber" id="phoneNumber" class="input form__input" required="">
+              <label for="phoneNumber" class="form__label form__label--placeholder">Phone number</label>
+              <p class="form__errorMessage">Please enter correct phone number</p>
+            </div>
+
+            <div class="form__inputContainer form__inputContainer--column-2">
+              <select id="industry" name="industry" class="input form__input form__input--select">
+                <option value="" selected=""></option>
+                <option value="Consumer Goods">Consumer Goods</option>
+                <option value="Retail">Retail</option>
+                <option value="Others">Others</option>
+              </select>  
+              <label for="industry" class="form__label form__label--placeholder">Industry</label>
+              <svg class="form__selectIcon" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 6L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <div class="form__inputContainer form__inputContainer--column-2">
+              <select id="whoAreYou" name="whoAreYou" class="input form__input form__input--select">
+                <option value="" selected=""></option>
+                <option value="Potential Customer">Potential Customer</option>
+                <option value="Current Customer">Current Customer</option>
+                <option value="Potential Partner">Potential Partner</option>
+                <option value="Current Partner">Current Partner</option>
+                <option value="Press/Analyst">Press/Analyst</option>
+                <option value="Investor">Investor</option>
+                <option value="Other">Other</option>
+              </select>
+              <label for="whoAreYou" class="form__label form__label--placeholder">Who are you?</label>
+              <svg class="form__selectIcon" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 6L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <div class="form__inputContainer form__inputContainer--column-2">
+              <select id="country" name="country" class="input form__input form__input--select form__input--searchEnabled" >
+                <option value="" selected=""></option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Aland Islands">Aland Islands</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="American Samoa">American Samoa</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="Anguilla">Anguilla</option>
+                <option value="Antarctica">Antarctica</option>
+                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+              </select>  
+              <label for="country" class="form__label form__label--placeholder">Country</label>
+              <svg class="form__selectIcon" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 6L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <div class="form__inputContainer">
+              <textarea name="message" id="message" class="input form__input form__input--textarea"></textarea>
+              <label for="message" class="form__label form__label--placeholder">Message</label>
+            </div>
+
+            <div class="form__container form__container--column form__container--column-reverse">
+              <div class="form__inputContainer form__inputContainer--column-2">
+                <input type="submit" id="submit" value="submit" class="input form__input form__input--submit visuallyhidden">
+                <label for="submit" class="trigger__link link form__label form__label--button">
+                  <div class="trigger__linkTextContainer">
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText form__submitText">Send</span>
+                    </div>
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText form__submitText">Send</span>
+                    </div>
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText form__submitText">Send</span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+  
+              <div class="form__inputContainer form__inputContainer--column-2">
+                <input type="checkbox" id="dataSubmission" name="dataSubmission" checked class="input form__input visuallyhidden">
+                <label for="dataSubmission" class="link form__label form__label--checkbox">
+                  <div class="form__checkbox">
+                    <div class="form__checkboxCircleInner">
+                    </div>
+                  </div>
+                  <span class="form__checkboxText">I give on data submission</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="navBar scroll-sections-horisontal__navBar">
+    <div class="navBar__inner navBar__buttons--hidden">
+      <div class="navBar__logosContainer">
+        <img class="navBar__logo navBar__logo--light" src="686251dd94c6235850ba.png" alt="Ailet logotype">
+        <img class="navBar__logo navBar__logo--dark navBar__logo--opacity-0" src="2534488b806277af7b1f.png" alt="Ailet logotype">
+      </div>
+      
+      <div class="navBar__buttons">
+        <button class="button menuButon navBar__menuButon">
+          <div class="menuButon__icon">
+            <div class="menuButon__iconLineContainer menuButon__iconLineContainer--top">
+              <div class="menuButon__iconLine menuButon__iconLine--top"></div>
+            </div>
+            <div class="menuButon__iconLineContainer menuButon__iconLineContainer--bottom">
+              <div class="menuButon__iconLine menuButon__iconLine--bottom"></div>
+            </div>
+            <!-- <div class="menuButon__iconLine menuButon__iconLine--top"></div>
+            <div class="menuButon__iconLine menuButon__iconLine--bottom"></div> -->
+          </div>
+          <span class="menuButon__text">Menu</span>
+        </button>
+        <div class="navBar__buttonsGap"></div>
+        <button class="button navBar__chatButon">
+          <img class="navBar__chatButtonLogo navBar__chatButtonLogo--dark" src="06058559b05f44c08008.svg" alt="Ailet logotype">
+          <img class="navBar__chatButtonLogo navBar__chatButtonLogo--gradient navBar__logo--opacity-0" src="179f8cd1b839b32ad432.svg" alt="Ailet logotype">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="scroll-sections-horisontal">
+
+    <div class="sphereSection panel scroll-sections-horisontal__panel">
+      <div class="sphereSection__inner">
+        <div class="sphere sphereSection__sphere">
+          <canvas class="sphere__canvas" id="canvasOne" width="900" height="520" ></canvas>
+        </div>
+        <h1 class="sphereSection__header">From image to insight</h1>
+      </div>
+    </div>
+
+    <section class="heroSection panel scroll-sections-horisontal__panel">
+      <div class="backgoundLogo">
+        <svg class="backgoundLogo__img heroSection__backgoundLogoImg" viewBox="0 0 1305 1384" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M333.099 1383.54C274.921 1383.54 215.989 1367.85 162.433 1334.81C4.37814 1237.45 -47.2184 1026.48 47.2831 863.565L640.819 -160.231C701.006 -264.008 809.676 -327.549 926.986 -327.549C1044.3 -327.549 1152.97 -264.008 1213.15 -160.231L1806.74 863.565C1901.19 1026.48 1849.64 1237.45 1691.59 1334.81C1533.53 1432.27 1328.86 1379.09 1234.4 1216.12L926.986 685.941L619.567 1216.12C557.169 1323.83 446.541 1383.54 333.099 1383.54Z" fill="#F7F7F7"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1435.33 705.193C1435.33 428.194 1207.74 203.654 926.976 203.654C646.213 203.654 418.622 428.194 418.622 705.193C418.622 982.191 646.213 1206.73 926.976 1206.73C1207.74 1206.73 1435.33 982.191 1435.33 705.193Z" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1196.37 704.955C1196.37 558.304 1075.89 439.434 927.245 439.434C778.601 439.434 658.116 558.304 658.116 704.955C658.116 851.605 778.601 970.475 927.245 970.475C1075.89 970.475 1196.37 851.605 1196.37 704.955Z" fill="#F7F7F7"/>
+        </svg>          
+      </div>
+      <div class="heroSection__inner">
+        <div class="heroSection__contentContainer">
+          <div class="heroSection__block heroSection__block--left heroBlockLeft">
+            <div class="heroBlockLeft__content">
+              <h2 class="heroBlockLeft__header">We deliver <span class="heroBlockLeft__colorText">sales efficiency in retail</span> through innovation, amazing products and practices.</h2>
+              <p class="heroBlockLeft__text">That helps to keep products on shelf and makes your customers pleased</p>
+            </div>
+          </div>
+          <div class="heroSection__block heroSection__block--right">
+            <div class="heroSection__gradientHeadersContainer">
+              <div class="heroSection__gradientHeadersLayout">
+                <div class="heroBlockRight__header">
+                  Shelf check is
+                  <br>
+                  <span class="heroBlockRight__gradientText">80% faster</span>
+                </div>
+                <div class="heroBlockRight__header">
+                  Shelf data accuracy is 
+                  <br>
+                  <span class="heroBlockRight__gradientText">over 95%</span>
+                </div>
+                <div class="heroBlockRight__header">
+                  Data
+                  <br>
+                  <span class="heroBlockRight__gradientText">high reliability</span>
+                  <br>
+                  <span class="heroBlockRight__text">comparing with manual retail audit</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="heroSection__block heroSection__block--left heroSection__block--bottom heroBlockLeft">
+            <a href="#" class="trigger__link link form__label--button chat__messageLink heroBlockLeft__link">
+              <div class="trigger__linkTextContainer">
+                <div class="trigger__linkTextLayout">
+                  <span class="trigger__linkText form__submitText">Make your store perfect</span>
+                </div>
+                <div class="trigger__linkTextLayout">
+                  <span class="trigger__linkText form__submitText">Make your store perfect</span>
+                </div>
+                <div class="trigger__linkTextLayout">
+                  <span class="trigger__linkText form__submitText">Make your store perfect</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="heroSection__borderTopHeaderContainer">
+        <div class="whatIsBlock__dollarSection borderTopHeader">
+          <div class="borderTopHeader__content">
+            <div class="borderTopHeader__headerAndIcon">
+              <h2 class="borderTopHeader__header">Everyday CPG companes face billion dollar questions</h2>
+              <span class="borderTopHeader__icon">$</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <div class='whatIsBlock'>
+    <div class="whatIsBlock__inner">
+
+
+      <div class="whatIsBlock__sliderSection">
+        <div class="whatIsBlock__sliderInner">
+          <h2 class="whatIsBlock__sliderHeader">What is my share of shelf?</h2>
+          <h2 class="whatIsBlock__sliderHeader">What is my on shelf availability level?</h2>
+          <h2 class="whatIsBlock__sliderHeader">What is my planogram compliance?</h2>
+          <h2 class="whatIsBlock__sliderHeader">What is my competitive index?</h2>
+        </div>
+      </div>
+
+      <div class="whatIsBlock__forSection">
+        <div class="whatIsBlock__forSectionInner">
+
+          <div class="borderTopHeader borderTopHeader--paddingTop-big">
+            <div class="borderTopHeader__content borderTopHeader__content--paddingTop-big">
+              <div class="borderTopHeader__block">
+                <h3 class="borderTopHeader__header borderTopHeader__header--orange">For Retail</h3>
+                <p class="borderTopHeader__blockText">Monitor every shelf in every store to increase efficiency and sales</p>
+              </div>
+              <div class="borderTopHeader__block">
+                <h3 class="borderTopHeader__header borderTopHeader__header--orange">For CPG</h3>
+                <p class="borderTopHeader__blockText">Optimize in-store execution and drive merchandising excellence</p>
+              </div>
+            </div>
+          </div>
+          <p class="whatIsBlock__text">Our vision is to make sales operations more strategic and dynamic</p>
+        </div>
+      </div>
+      <div class="whatIsBlock__triggerSection">
+        <div class="whatIsBlock__triggerSectionInner">
+          <div class="trigger">
+            <div class="trigger__inner">
+              <h3 class="trigger__header">Put AI inside your Sales Effectiveness Process.</h3>
+              <p class="trigger__text">Our Ailet Platform driven by visual recognition and artificial intelligence can become one version of truth. Motivate your sales forces based on real sales drivers and KPIs.</p>
+              <div class="whatIsBlock__linkContainer">
+                <a href="#" class="howItWorks__link trigger__link link">
+                  <div class="trigger__linkTextContainer">
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText">Request a demo</span>
+                    </div>
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText">Request a demo</span>
+                    </div>
+                    <div class="trigger__linkTextLayout">
+                      <span class="trigger__linkText">Request a demo</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class='howItWorks'>
+    <div class="howItWorks__topGradient"></div>
+    <div class='howItWorks__inner'>
+      <!-- <div class="ST__Container ST__Container--desktop">
+        <div class="ST__contentContainer ST__contentContainer--left">
+          <div class="howItWorks__sphere">
+          </div>
+          <div class="ST__stageImgContainer">
+            <img class="ST__stageImg howItWorks__stageImg howItWorks__stageImg--translate-right" src="./static/stageImg-1_1x.png" alt="Take a photo in store using IR application">
+          </div>
+          <div class="ST__stageImgContainer">
+            <img class="ST__stageImg howItWorks__stageImg" src="./static/stageImg-2_1x.png" alt="Images are recognized quickly and report 
+            is generated">
+          </div>
+        </div>
+
+        <div class="ST__contentContainer ST__contentContainer--stage howItWorks__contentContainer--stage">
+          <h3 class="howItWorks__stageIndicatorHeader">Ailet AI</h3>
+        </div>
+
+        <div class="ST__contentContainer ST__contentContainer--right howItWorks__contentContainer--right">
+          <div class="ST__contentBlock--right howItWorks__contentBlock--right">
+            <div class="howItWorks__stageContent">
+              <h2 class="howItWorks__stageHeader howItWorks__stageHeader--big">How solution works?</h2>
+              <p class="howItWorks__stageText howItWorks__stageText--white">Save time&reduce costs while up-lift your sales</p>
+            </div>
+          </div>
+          <div class="ST__contentBlock--right howItWorks__contentBlock--right">
+            <div class="howItWorks__stageContent">
+              <h2 class="howItWorks__stageHeader">Take a photo in store using IR application</h2>
+              <p class="howItWorks__stageText">Shelf photos taken by your reps are uploaded to the cloud, where AI converts them accurately and instantly into shelf data (product, price, promotion, placement)</p>
+            </div>
+          </div>
+          <div class="ST__contentBlock--right howItWorks__contentBlock--right">
+            <div class="howItWorks__stageContent">
+              <h2 class="howItWorks__stageHeader">Images are recognized quickly and report 
+                is generated</h2>
+              <p class="howItWorks__stageText">Best shelf activity information is communicated to locations in real time, and instant visibility of in-store retail is made available to corporate customers</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="ST__Container ST__Container--mobile">
+        <div class="ST__contentContainer ST__contentContainer--fixed">
+          <div class="ST__contentblock--mobile--left">
+            <div class="ST__sphereContainer ST__sphereContainer--mobile">
+              <div class="howItWorks__sphere">
+                <canvas class="sphere__canvas sphere__canvas--reduced" id="canvasHowItWorks" width="900" height="520"></canvas>
+              </div>
+              <div class="ST__stageImgContainer ST__stageImgContainer--mobile">
+                <img class="ST__stageImg howItWorks__stageImg" src="a67d40f68ec2c68963f5.png" alt="Take a photo in store using IR application">
+              </div>
+              <div class="ST__stageImgContainer ST__stageImgContainer--mobile">
+                <img class="ST__stageImg howItWorks__stageImg howItWorks__stageImg--translate-left" src="0336386c8609ba9fdb89.png" alt="Images are recognized quickly and report 
+                is generated">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="ST__contentblock--mobile--right">
+            <div class="ST__stageIndicatorsContainer">
+              <h3 class="howItWorks__stageIndicatorHeader howItWorks__stageIndicatorHeader--mobile howItWorks__stageIndicatorHeader--inFlow">Ailet AI</h3>
+              <h3 class="howItWorks__stageIndicatorHeader howItWorks__stageIndicatorHeader--mobile">Stage 1</h3>
+              <h3 class="howItWorks__stageIndicatorHeader howItWorks__stageIndicatorHeader--mobile">Stage 2</h3>
+            </div>
+  
+            <div class="ST__contentContainer ST__blocksContainer">
+              <div class="ST__contentBlock--mobile howItWorks__contentBlock--mobile">
+                <div class="howItWorks__stageContent">
+                  <h2 class="howItWorks__stageHeader howItWorks__stageHeader--big">How solution works?</h2>
+                  <p class="howItWorks__stageText howItWorks__stageText--white">Save time&reduce costs while up-lift your sales</p>
+                </div>
+              </div>
+              <div class="ST__contentBlock--mobile howItWorks__contentBlock--mobile">
+                <div class="howItWorks__stageContent">
+                  <h2 class="howItWorks__stageHeader">Take a photo in store using IR application</h2>
+                  <p class="howItWorks__stageText">Shelf photos taken by your reps are uploaded to the cloud, where AI converts them accurately and instantly into shelf data (product, price, promotion, placement)</p>
+                </div>
+              </div>
+              <div class="ST__contentBlock--mobile howItWorks__contentBlock--mobile">
+                <div class="howItWorks__stageContent">
+                  <h2 class="howItWorks__stageHeader">Images are recognized quickly and report 
+                    is generated</h2>
+                  <p class="howItWorks__stageText">Best shelf activity information is communicated to locations in real time, and instant visibility of in-store retail is made available to corporate customers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="howItWorks__linkContainer">
+        <a href="#" class="howItWorks__link trigger__link link">
+          <div class="trigger__linkTextContainer">
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText">We have more to say about our technologies</span>
+            </div>
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText">We have more to say about our technologies</span>
+            </div>
+            <div class="trigger__linkTextLayout">
+              <span class="trigger__linkText">We have more to say about our technologies</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class='solutions' id="Solution">
+    <div class='solutions__inner'>
+      <div class="borderTopHeader">
+        <div class="borderTopHeader__content">
+          <div class="borderTopHeader__headerAndIcon">
+            <h2 class="borderTopHeader__header solutions__header">Solutions to improve efficiency</h2>
+            <svg width="39" height="18" viewBox="0 0 39 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M34.9655 0V1.42066H36.7043L32.9483 5.38853L30.931 3.25754L27.7607 6.60664C27.4977 6.47311 27.2071 6.39299 26.8966 6.39299C25.7845 6.39299 24.8793 7.34923 24.8793 8.52398C24.8793 8.89129 24.9762 9.23224 25.1315 9.53399L21.6167 13.6597C21.3787 13.5553 21.1187 13.4963 20.8448 13.4963C20.832 13.4963 20.8205 13.4998 20.8077 13.4998L18.104 5.88313C18.5426 5.49224 18.8276 4.91405 18.8276 4.26199C18.8276 3.08724 17.9224 2.131 16.8103 2.131C15.6983 2.131 14.7931 3.08724 14.7931 4.26199C14.7931 4.42882 14.8154 4.58941 14.8502 4.74514L10.6404 8.26455C10.2986 7.98638 9.87706 7.81365 9.41379 7.81365C8.53847 7.81365 7.79875 8.40953 7.52033 9.23432H3.9107C3.63228 8.40953 2.89256 7.81365 2.01724 7.81365C0.905198 7.81365 0 8.7699 0 9.94465C0 11.1194 0.905198 12.0756 2.01724 12.0756C2.89256 12.0756 3.63228 11.4798 3.9107 10.655H7.52099C7.79941 11.4798 8.53913 12.0756 9.41445 12.0756C10.5265 12.0756 11.4317 11.1194 11.4317 9.94465C11.4317 9.77782 11.4094 9.61723 11.3746 9.4615L15.5844 5.94209C15.9255 6.22026 16.3471 6.39299 16.8103 6.39299C16.8231 6.39299 16.8346 6.38952 16.8474 6.38952L19.5512 14.0062C19.1126 14.3971 18.8276 14.9752 18.8276 15.6273C18.8276 16.8021 19.7328 17.7583 20.8448 17.7583C21.9569 17.7583 22.8621 16.8021 22.8621 15.6273C22.8621 15.26 22.7659 14.9191 22.6099 14.6173L26.1247 10.4916C26.3627 10.596 26.6227 10.655 26.8966 10.655C28.0086 10.655 28.9138 9.69874 28.9138 8.52398C28.9138 8.19587 28.8379 7.88892 28.7115 7.6111L30.931 5.26645L32.9483 7.39744L37.6552 2.42512V4.26199H39V0H34.9655ZM2.01724 10.655C1.64623 10.655 1.34483 10.3366 1.34483 9.94465C1.34483 9.55272 1.64623 9.23432 2.01724 9.23432C2.38825 9.23432 2.68966 9.55272 2.68966 9.94465C2.68966 10.3366 2.38825 10.655 2.01724 10.655ZM9.41379 10.655C9.04278 10.655 8.74138 10.3366 8.74138 9.94465C8.74138 9.55272 9.04278 9.23432 9.41379 9.23432C9.7848 9.23432 10.0862 9.55272 10.0862 9.94465C10.0862 10.3366 9.7848 10.655 9.41379 10.655ZM16.1379 4.26199C16.1379 3.87006 16.4393 3.55166 16.8103 3.55166C17.1814 3.55166 17.4828 3.87006 17.4828 4.26199C17.4828 4.65392 17.1814 4.97232 16.8103 4.97232C16.4393 4.97232 16.1379 4.65392 16.1379 4.26199ZM20.8448 16.3376C20.4738 16.3376 20.1724 16.0192 20.1724 15.6273C20.1724 15.2354 20.4738 14.917 20.8448 14.917C21.2158 14.917 21.5172 15.2354 21.5172 15.6273C21.5172 16.0192 21.2158 16.3376 20.8448 16.3376ZM26.8966 9.23432C26.5255 9.23432 26.2241 8.91592 26.2241 8.52398C26.2241 8.13205 26.5255 7.81365 26.8966 7.81365C27.2676 7.81365 27.569 8.13205 27.569 8.52398C27.569 8.91592 27.2676 9.23432 26.8966 9.23432Z" fill="black"/>
+              </svg>
+          </div>
+        </div>
+      </div>
+      <div class="accordionSection">
+        <div class="accordionSection__imagesContainer">
+          <div class="accordionSection__imgContainer">
+            <img class="accordionSection__img" src="0b2b1e34a7d71a14cee6.jpg" alt="Ailet mobile app capabilities">
+            <div class="accordionSection__imgMask">
+            </div>
+          </div>
+          <div class="accordionSection__imgContainer">
+            <img class="accordionSection__img" src="653f57cd3184dfffac34.jpg" alt="AI Driven Data Management platform">
+            <div class="accordionSection__imgMask">
+            </div>
+          </div>
+          <div class="accordionSection__imgContainer">
+            <img class="accordionSection__img" src="37fa7ff6066788b01cb3.jpg" alt="API & DeepLink integration (Our solution can be seamlessly integrated in 1 week into any Salesforce Automation Platform)">
+            <div class="accordionSection__imgMask">
+            </div>
+          </div>
+          <div class="accordionSection__imgContainer">
+            <img class="accordionSection__img" src="8dfa6f32d3ffc9f1e95e.jpg" alt="Data visualization platform - Fast Business Intelligence Platform to visualize any Retail Execution Process and provide Actionable Dashboards">
+            <div class="accordionSection__imgMask">
+            </div>
+          </div>
+        </div>
+        <div class="accordionSection__accordion accordion">
+          <div class="accordion__inner">
+            <div class="accordion__block accordion__block--active">
+              <div class="accordion__header button">
+                <h3 class="accordion__headerText">Ailet mobile app capabilities</h3>
+                <div class="accordion__headerIcon">
+                  <div class="accordion__iconLine accordion__iconLine--plus"></div>
+                  <div class="accordion__iconLine"></div>
+                </div>
+              </div>
+
+              <div class="accordion__content">
+                <div class="accordion__contentBlock">
+                  <ol class="accordion__numList numList">
+                    <li class="accordion__numListItem numList__item">In Store Task management (Mobile field sales force user can get a task for each store visit)</li>
+                    <li class="accordion__numListItem numList__item">Photo quality checks (User can take a high quality photo of the shelf with built-in guidelines)<li>
+                    <li class="accordion__numListItem numList__item">Shelf & Store KPIs analytics (User gets calculated KPIs in real time and can improve them during same visit)<li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__block">
+              <div class="accordion__header button">
+                <h3 class="accordion__headerText">AI Driven Data Management platform</h3>
+                <div class="accordion__headerIcon">
+                  <div class="accordion__iconLine accordion__iconLine--plus"></div>
+                  <div class="accordion__iconLine"></div>
+                </div>
+              </div>
+
+              <div class="accordion__content">
+                <div class="accordion__contentBlock">
+                  <ol class="accordion__numList numList">
+                    <li class="accordion__numListItem numList__item">In Store Task management (Mobile field sales force user can get a task for each store visit)</li>
+                    <li class="accordion__numListItem numList__item">Photo quality checks (User can take a high quality photo of the shelf with built-in guidelines)<li>
+                    <li class="accordion__numListItem numList__item">Shelf & Store KPIs analytics (User gets calculated KPIs in real time and can improve them during same visit)<li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__block">
+              <div class="accordion__header button">
+                <h3 class="accordion__headerText">API & DeepLink integration (Our solution can be seamlessly integrated in 1 week into any Salesforce Automation Platform)</h3>
+                <div class="accordion__headerIcon">
+                  <div class="accordion__iconLine accordion__iconLine--plus"></div>
+                  <div class="accordion__iconLine"></div>
+                </div>
+              </div>
+
+              <div class="accordion__content">
+                <div class="accordion__contentBlock">
+                  <ol class="accordion__numList numList">
+                    <li class="accordion__numListItem numList__item">In Store Task management (Mobile field sales force user can get a task for each store visit)</li>
+                    <li class="accordion__numListItem numList__item">Photo quality checks (User can take a high quality photo of the shelf with built-in guidelines)<li>
+                    <li class="accordion__numListItem numList__item">Shelf & Store KPIs analytics (User gets calculated KPIs in real time and can improve them during same visit)<li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__block">
+              <div class="accordion__header button">
+                <h3 class="accordion__headerText">Data visualization platform - Fast Business Intelligence Platform to visualize any Retail Execution Process and provide Actionable Dashboards</h3>
+                <div class="accordion__headerIcon">
+                  <div class="accordion__iconLine accordion__iconLine--plus"></div>
+                  <div class="accordion__iconLine"></div>
+                </div>
+              </div>
+
+              <div class="accordion__content">
+                <div class="accordion__contentBlock">
+                  <ol class="accordion__numList numList">
+                    <li class="accordion__numListItem numList__item">In Store Task management (Mobile field sales force user can get a task for each store visit)</li>
+                    <li class="accordion__numListItem numList__item">Photo quality checks (User can take a high quality photo of the shelf with built-in guidelines)<li>
+                    <li class="accordion__numListItem numList__item">Shelf & Store KPIs analytics (User gets calculated KPIs in real time and can improve them during same visit)<li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class='why' id="Why">
+    <div class="backgoundLogo">
+      <img class="backgoundLogo__img why__backgoundLogoImg" src="0846bff3f50b298f291b.svg" alt="Ailet logotype">
+    </div>
+    <div class='why__inner'>
+      <div class="borderTopHeader why__borderTopHeader">
+        <div class="borderTopHeader__content">
+          <div class="borderTopHeader__headerAndIcon">
+            <h2 class="borderTopHeader__header">Why Ailet?</h2>
+          </div>
+        </div>
+      </div>
+      <div class="why__parallaxSection">
+        <div class="whyParallax">
+          <div class="whyParallax__inner">
+            <div class="whyParallax__contentBlock whyParallax__contentBlock--left">
+              <div class="whyParallax__block">
+                <svg class="icon whyParallax__icon">
+                  <use xlink:href="#whyIcon1"></use>
+                </svg>
+                <div class="whyParallax__textContent">
+                  <h3 class="whyParallax__header">Trustworthy solution</h3>
+                  <p class="whyParallax__text">Our solution is daily used by 10 000 mobile users in all continents. We recognize 1B SKUs from 6M photos per month from 500k stores</p>
+                </div>
+              </div>
+              <div class="whyParallax__block">
+                <svg class="icon whyParallax__icon">
+                  <use xlink:href="#whyIcon2"></use>
+                </svg>
+                <div class="whyParallax__textContent">
+                  <h3 class="whyParallax__header">Master Data is our pain</h3>
+                  <p class="whyParallax__text">Just let us know which competitors you care most about and let us find all other information. We give you a ready to use competitor intelligence solution with no efforts on your side.</p>
+                </div>
+              </div>
+              <div class="whyParallax__block">
+                <svg class="icon whyParallax__icon">
+                  <use xlink:href="#whyIcon3"></use>
+                </svg>
+                <div class="whyParallax__textContent">
+                  <h3 class="whyParallax__header">Technology leadership</h3>
+                  <p class="whyParallax__text">Ailet is recognized as a key player in image recognition in the Retail market</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="whyParallax__contentBlock whyParallax__contentBlock--right">
+              <div class="whyParallax__block">
+                <svg class="icon whyParallax__icon">
+                  <use xlink:href="#whyIcon4"></use>
+                </svg>
+                <div class="whyParallax__textContent">
+                  <h3 class="whyParallax__header">Flexibility</h3>
+                  <p class="whyParallax__text">Our Platform is flexible and agile. You can use the solution standalone or integrated inside SFA/CRM. We simplify current data integrations between all SFA components. Any region, store format, general or traditional trade</p>
+                </div>
+              </div>
+              <div class="whyParallax__block">
+                <svg class="icon whyParallax__icon">
+                  <use xlink:href="#whyIcon5"></use>
+                </svg>
+                <div class="whyParallax__textContent">
+                  <h3 class="whyParallax__header">Faster than ever before</h3>
+                  <p class="whyParallax__text">We believe that each minute counts. Manage your retail execution dynamically. Save time, Save money, Win your competitors</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why__partners" id="Partners">
+        <div class="why__partnersInner">
+          <div class="why__contentContainer">
+            <div class="borderTopHeader why__borderTopHeader">
+              <div class="borderTopHeader__content why__partnersHeader">
+                <div class="borderTopHeader__headerAndIcon">
+                  <h2 class="borderTopHeader__header">Trusted Partners</h2>
+                  <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 10.6429C14.56 9.93571 16.6 9.57143 17.9091 9.57143C20.2764 9.57143 25 10.7286 25 13.0536V16H1V13.0536C1 10.7286 5.72364 9.57143 8.09091 9.57143C9.4 9.57143 11.44 9.925 13 10.6429ZM13 10.6429C13.3491 11.0286 14.0909 11.5357 14.4545 13.0536C14.8182 14.5714 14.4545 16 14.4545 16M8.09091 8.5C10.1964 8.5 11.9091 6.81786 11.9091 4.75C11.9091 2.68214 10.1964 1 8.09091 1C5.98545 1 4.27273 2.68214 4.27273 4.75C4.27273 6.81786 5.98545 8.5 8.09091 8.5ZM17.9091 8.5C20.0145 8.5 21.7273 6.81786 21.7273 4.75C21.7273 2.68214 20.0145 1 17.9091 1C15.8036 1 14.0909 2.68214 14.0909 4.75C14.0909 6.81786 15.8036 8.5 17.9091 8.5Z" stroke="black" stroke-width="1.5"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+            <div class="why__partnersContent">
+              <div class="why__partnersTextContent">
+                <p class="why__partnersText">We do believe that our customer success is based on partner success. Our Platform can be integrated with any SFA, CRM, Field Marketing and Crowd Solutions. Our image recognition component can empower your salesforce and add valuable analytical capabilities to your end customers. </p>
+                <a href="#" class="caseLink">
+                  <span class="caseLink__circle"></span>
+                  <div class="caseLink__textContainer">
+                    <span class="caseLink__text">case studies</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="why__partnersCounterContainer">
+            <h3 class="why__partnersCounterHeader">
+              <span class="why__partnersCounter">20</span>partners globally
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="why__partnersLogos">
+        <div class="why__partnersLogoImgContainer">
+          <img class="why__partnersLogoImg" src="967005d6c61760d0444e.png" alt="Ailet partner logo">
+        </div>
+        <div class="why__partnersLogoImgContainer">
+          <img class="why__partnersLogoImg" src="cd979cc42f635bffe8f9.png" alt="Ailet partner logo">
+        </div>
+        <div class="why__partnersLogoImgContainer">
+          <img class="why__partnersLogoImg" src="2182f6a7b8da0e63509d.png" alt="Ailet partner logo">
+        </div>
+        <div class="why__partnersLogoImgContainer">
+          <img class="why__partnersLogoImg" src="b001381534a7b1586cdc.png" alt="Ailet partner logo">
+        </div>
+        <div class="why__partnersLogoImgContainer">
+          <img class="why__partnersLogoImg" src="bb708502ff263b05f208.png" alt="Ailet partner logo">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="clients">
+    <div class="clients__inner">
+      <div class="borderTopHeader clients__borderTopHeader">
+        <div class="borderTopHeader__content">
+          <div class="borderTopHeader__headerAndIcon">
+            <h2 class="borderTopHeader__header">Clients</h2>
+            <a href="#" class="caseLink">
+              <span class="caseLink__circle"></span>
+              <div class="caseLink__textContainer">
+                <span class="caseLink__text">case studies</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clients__parallax">
+      <div class="clients__parallaxBlock">
+        <img class="clients__logoImg" src="528c5fba0224017bb6e3.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="2d1a79cb6459a8464d44.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="2eda11c3f29cd6868ac0.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="528c5fba0224017bb6e3.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="2d1a79cb6459a8464d44.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="2eda11c3f29cd6868ac0.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="528c5fba0224017bb6e3.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="2d1a79cb6459a8464d44.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="2eda11c3f29cd6868ac0.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="528c5fba0224017bb6e3.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="2d1a79cb6459a8464d44.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="2eda11c3f29cd6868ac0.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="528c5fba0224017bb6e3.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="2d1a79cb6459a8464d44.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="2eda11c3f29cd6868ac0.png" alt="Ailet client logo">
+      </div>
+
+      <div class="clients__parallaxBlock">
+        <img class="clients__logoImg" src="f3f68348b6ba2063a6c8.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="eec673d9006ad9709b53.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="61365be93685f79a68ed.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="f3f68348b6ba2063a6c8.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="eec673d9006ad9709b53.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="61365be93685f79a68ed.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="f3f68348b6ba2063a6c8.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="eec673d9006ad9709b53.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="61365be93685f79a68ed.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="f3f68348b6ba2063a6c8.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="eec673d9006ad9709b53.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="61365be93685f79a68ed.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="f3f68348b6ba2063a6c8.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="eec673d9006ad9709b53.png" alt="Ailet client logo">
+        <img class="clients__logoImg" src="61365be93685f79a68ed.png" alt="Ailet client logo">
+      </div>
+    </div>
+
+    <div class="clients__inner">
+      <div class="trigger">
+        <div class="trigger__inner clients__triggerInner">
+          <h3 class="trigger__header">Get Started, Contact us!</h3>
+          <p class="trigger__text">If you have any questions or would like a consultation or a demo, contact us!</p>
+          <div class="whatIsBlock__linkContainer">
+            <a href="#" class="howItWorks__link trigger__link link">
+              <div class="trigger__linkTextContainer">
+                <div class="trigger__linkTextLayout">
+                  <span class="trigger__linkText">Get in touch</span>
+                </div>
+                <div class="trigger__linkTextLayout">
+                  <span class="trigger__linkText">Get in touch</span>
+                </div>
+                <div class="trigger__linkTextLayout">
+                  <span class="trigger__linkText">Get in touch</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="contacts" id="Contacts">
+    <div class="howItWorks__topGradient"></div>
+    <div class="clients__topGradient"></div>
+    <div class="contacts__inner">
+      <div class="contacts__content">
+        <h2 class="contacts__header">
+          <img class="contacts__headerImg" src="c5853b5f4dc4d42ca83d.png" alt="Ailet logotype">
+          <span class="contacts__headerText">Contacts</span>
+        </h2>
+
+        <div class="contacts__contactsContainer">
+          <div class="contacts__contact contact">
+            <h3 class="contact__header">US HQ</h3>
+            <p class="contact__text">9 The Green, Ste A, City of Dover County of Kent, zip code 19901, Delaware, the United States of America</p>
+            <p class="contact__text">
+            tel: <a href="tel:+1 (302) 608-9033" class="link contact__text--hightlight contact__tel">+1 (302) 608-9033</a></p>
+          </div>
+          <div class="contacts__contact contact">
+            <h3 class="contact__header">R&D Office Moscow</h3>
+            <p class="contact__text">143026, Moscow, Bolshoy boulevard 42/1, Skolkovo center territory
+              </p>
+            <p class="contact__text">
+              tel: <a href="tel:+7 (499) 550-34-63" class="link contact__tel"><span class="contact__text--hightlight">+7 (499) 550-34-63</span></p></a>
+          </div>
+          <div class="contacts__contact contact">
+            <h3 class="contact__header">Office EU</h3>
+            <p class="contact__text">Pasilankatu 2, 00240 Helsinki, Finland <a href="tel:+358 (0) 9 3158 9580" class="link contact__tel"><span class="contact__text--hightlight">+358 (0) 9 3158 9580</span></p></a>
+          </div>
+          <div class="contacts__contact contact">
+            <h3 class="contact__header">Office Turkey & Middle East</h3>
+            <h3 class="contact__header">Office Brazil & Latin America</h3>
+          </div>
+        </div>
+
+        <div class="borderTopHeader contacts__borderTopHeader">
+          <div class="borderTopHeader__content footer__borderTopContainer">
+            <div class="borderTopHeader__headerAndIcon footer__contentContainer">
+              <p class="borderTopHeader__header footer__text footer__text--layout-left">© ООО «Ailet», 2020</p>
+              <p class="borderTopHeader__header footer__text footer__text--layout-center">Data processing policy</p>
+              
+              <a href="#" class="footer__link link" href="https://markweber.ru/">
+                <span class="footer__linkText">Site creation</span>
+                <img class="footer__markweberLogo" src="7d3247a8fecd3d7f22cc.svg" alt="MarkWeber logotype">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <svg width="0" height="0" style="display: none;">
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" id="whyIcon1">
+      <path d="M31.126 21.126h3.307c.313 0 .567.25.567.56v10.062a.563.563 0 01-.567.56h-3.23m-.077-11.182l-3.064-1.006-.995-2.456v-1.849c-.004-1.279-.982-2.35-2.27-2.488m6.329 7.8l.077 11.18m-6.407-18.98c0-.076.004-.153.004-.23V4.914a.56.56 0 00-.404-.535L13.063 1.023a.574.574 0 00-.326 0L1.404 4.378A.56.56 0 001 4.913v8.184c0 .26.018.516.027.774.015.377.036.752.07 1.125l.02.186c.696 7.099 5.055 13.34 11.53 16.51a.57.57 0 00.506 0 21.28 21.28 0 002.45-1.423m9.193-16.942c-.232 0-.725 0-1.135.129a2.514 2.514 0 00-1.694 2.359c-.003 1.018.068 2.234.202 2.564l.66 1.629h-3.292m-3.934 10.261c.177.242.402.446.66.602a2.212 2.212 0 00-.317 2.382A2.269 2.269 0 0018 34.543h9.633a.574.574 0 00.315-.093l3.255-2.143m-15.6-2.038c-.276-.297-.395-.846-.42-1.083a2.177 2.177 0 01-.016-.233c0-.526.188-1.036.532-1.438a2.199 2.199 0 01-1.05-2.36m4.888-5.147c1.204-2.13 1.537-4.169 1.86-6.963.252-2.188.071-4.218.003-5.64V7.15a.56.56 0 00-.41-.538l-7.934-2.236a.568.568 0 00-.346.01L4.776 7.183a.56.56 0 00-.376.527v4.727c.086 1.373.378 4.372.857 5.386a14.51 14.51 0 005.909 7.342l1.427.905a.573.573 0 00.614 0l1.427-.905.015-.01m4.888-5.146H16.3c-1.252 0-2.267 1.001-2.267 2.236 0 .571.224 1.12.624 1.534.202.249.484.873-.008 1.376M31.643 9.042a9.566 9.566 0 00-.825-.864m2.601 9.806l.001-.002c.121-.377.218-.76.29-1.15M26.642 5.91c.39.099.772.222 1.145.368m5.6 5.86c.126.376.227.76.303 1.149m-6.977-2.743l.202.08a4.665 4.665 0 012.985 4.352" stroke="url(#paint0_linear)" stroke-width="1.5" stroke-linecap="round"></path>
+      <defs>
+        <linearGradient id="paint0_linear" x1="1.78" y1="1" x2="34.541" y2="34.986" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+      </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 28" id="whyIcon2">
+      <path d="M31 6.566H1M27.875 1H4.125C2.399 1 1.001 2.359 1 4.035v19.667c0 1.676 1.4 3.034 3.125 3.035h23.75c1.726 0 3.124-1.36 3.125-3.035V4.035C31 2.359 29.6 1 27.875 1z" stroke="url(#paint0_linear)" stroke-width="1.5"></path>
+      <path d="M10.13 15.799c1.801 0 3.261-1.297 3.261-2.895 0-1.6-1.46-2.896-3.26-2.896-1.801 0-3.261 1.297-3.261 2.896.002 1.598 1.46 2.892 3.26 2.895z" stroke="url(#paint1_linear)" stroke-width="1.5"></path>
+      <path d="M9.804 17.73c-1.303-.01-2.553.465-3.462 1.311a4.408 4.408 0 00-1.429 3.277c.001.308.276.558.616.559h8.55c.34-.001.616-.25.617-.559a4.408 4.408 0 00-1.43-3.277c-.908-.846-2.159-1.32-3.462-1.312z" stroke="url(#paint2_linear)" stroke-width="1.5"></path>
+      <path d="M18.609 18.373h9.782" stroke="url(#paint3_linear)" stroke-width="1.5" stroke-linecap="round"></path>
+      <path d="M18.609 21.59h9.782" stroke="url(#paint4_linear)" stroke-width="1.5" stroke-linecap="round"></path>
+      <path d="M18.609 11.938h9.782" stroke="url(#paint5_linear)" stroke-width="1.5" stroke-linecap="round"></path>
+      <path d="M18.609 15.155h9.782" stroke="url(#paint6_linear)" stroke-width="1.5" stroke-linecap="round"></path>
+      <defs>
+        <linearGradient id="paint0_linear" x1="1.688" y1="1" x2="26.455" y2="30.547" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+        <linearGradient id="paint1_linear" x1="7.019" y1="10.008" x2="12.621" y2="16.467" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+        <linearGradient id="paint2_linear" x1="5.137" y1="17.729" x2="9.229" y2="25.687" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+        <linearGradient id="paint3_linear" x1="18.833" y1="18.373" x2="19.026" y2="20.308" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+        <linearGradient id="paint4_linear" x1="18.833" y1="21.59" x2="19.026" y2="23.525" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+        <linearGradient id="paint5_linear" x1="18.833" y1="11.938" x2="19.026" y2="13.874" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+        <linearGradient id="paint6_linear" x1="18.833" y1="15.155" x2="19.026" y2="17.09" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+      </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 42" id="whyIcon3">
+      <path d="M29.235 32.395h.223-.223c0 .68-.568 1.257-1.292 1.257H12.267c-.723 0-1.291-.576-1.291-1.257V15.46l2.368-4.657.081-.16V8.471c0-.386.324-.722.747-.722h11.866c.423 0 .747.336.747.722v2.172l.082.16 2.367 4.657v16.934z" stroke="url(#paint0_linear)" stroke-width="1.5"></path>
+      <path d="M8.226.999H1v6.04m0 26.872v6.38h6.153" stroke="url(#paint1_linear)" stroke-width="1.5" stroke-linecap="round"></path>
+      <path d="M31.985 40.29h7.226v-6.04m0-26.872V1h-6.154" stroke="url(#paint2_linear)" stroke-width="1.5" stroke-linecap="round"></path>
+      <defs>
+        <linearGradient id="paint0_linear" x1="10.679" y1="6.999" x2="36.27" y2="25.884" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+        <linearGradient id="paint1_linear" x1="1.166" y1=".999" x2="15.127" y2="3.627" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+        <linearGradient id="paint2_linear" x1="39.045" y1="40.29" x2="25.084" y2="37.662" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+      </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 41" id="whyIcon4">
+      <path d="M32.794 19.33a.75.75 0 100-1.5v1.5zm1.047-2.989a.75.75 0 000-1.5v1.5zm-1.047-2.988a.75.75 0 100-1.5v1.5zm-5.536-6.772a.75.75 0 00-1.5 0h1.5zm-3.03-1.213a.75.75 0 00-1.5 0h1.5zm-1.408 3.12v-.75.75zM21.2 6.581a.75.75 0 10-1.5 0h1.5zm-7.16 5.272a.75.75 0 100 1.5v-1.5zm-.924 2.988a.75.75 0 000 1.5v-1.5zm.924 2.988a.75.75 0 100 1.5v-1.5zm5.59 4.865v-.75.75zM23.832.999v-.75.75zm-12.37 7.383l-.086.745.53.061.232-.48-.676-.326zM45.8 21.088l.733.156.005-.026.004-.026-.742-.104zm-20.958 1.606v.75-.75zm9.943-14.312l-.739.127.117.686.694-.066-.072-.747zm-20.22 25.813v.75h.75v-.75h-.75zm12.675 3.252l.059.747-.06-.747zm5.153-3.252h-.75v.75h.75v-.75zM23.48 8.489v.75-.75zm3.85 14.955h1.373v-1.5h-1.374v1.5zm1.373 0c1.494 0 2.726-1.2 2.726-2.7h-1.5c0 .652-.54 1.2-1.226 1.2v1.5zm2.726-2.7V19.23h-1.5v1.516h1.5zm0-2.814v-1.69h-1.5v1.69h1.5zm0-2.989v-1.688h-1.5v1.688h1.5zm0-2.988v-1.515h-1.5v1.515h1.5zm0-1.515c0-1.499-1.232-2.7-2.726-2.7v1.5c.685 0 1.226.549 1.226 1.2h1.5zm-2.726-2.7h-1.536v1.5h1.537v-1.5zm-2.853 0h-1.712v1.5h1.712v-1.5zm-3.029 0H21.11v1.5h1.711v-1.5zm-3.028 0h-1.537v1.5h1.537v-1.5zm-1.537 0c-1.494 0-2.726 1.201-2.726 2.7h1.5c0-.651.541-1.2 1.226-1.2v-1.5zm-2.726 2.7v1.515h1.5v-1.515h-1.5zm0 2.815v1.688h1.5v-1.688h-1.5zm0 2.988v1.688h1.5v-1.688h-1.5zm0 2.988v1.516h1.5v-1.516h-1.5zm0 1.516c0 1.498 1.232 2.699 2.726 2.699v-1.5a1.215 1.215 0 01-1.226-1.2h-1.5zm2.726 2.699h1.374v-1.5h-1.374v1.5zM23.833.249c-3.89 0-6.657.859-8.718 2.308-2.054 1.445-3.328 3.42-4.328 5.5l1.352.65c.95-1.973 2.084-3.689 3.839-4.923 1.748-1.229 4.191-2.035 7.855-2.035v-1.5zM11.548 7.637a10.372 10.372 0 00-1.18-.067v1.5c.336 0 .674.019 1.01.057l.17-1.49zm-1.18-.067C4.798 7.57.25 12.042.25 17.562h1.5c0-4.673 3.857-8.492 8.618-8.492v-1.5zM.25 17.562c0 5.52 4.548 9.992 10.118 9.992v-1.5c-4.76 0-8.618-3.82-8.618-8.492H.25zm10.118 9.992h4.197v-1.5h-4.197v1.5zm4.197 0h5.064v-1.5h-5.064v1.5zm5.064 0h7.7v-1.5h-7.7v1.5zm7.7 0h5.064v-1.5h-5.065v1.5zm5.064 0h6.254v-1.5h-6.254v1.5zm6.254 0c3.783 0 7.103-2.644 7.886-6.31l-1.467-.313c-.632 2.96-3.329 5.124-6.42 5.124v1.5zm-29.35 6.974a.342.342 0 01-.349-.333h-1.5c0 1.02.838 1.833 1.848 1.833v-1.5zm-.349-.333c0-.174.147-.333.348-.333v-1.5c-1.01 0-1.848.812-1.848 1.833h1.5zm.348-.333c.2 0 .348.16.348.333h1.5a1.842 1.842 0 00-1.848-1.833v1.5zm.348.333a.342.342 0 01-.348.333v1.5c1.01 0 1.848-.812 1.848-1.833h-1.5zm10.333 4.331a.342.342 0 01-.348.333v1.5c1.01 0 1.848-.812 1.848-1.833h-1.5zm-.348.333c-.2 0-.347-.16-.347-.333h-1.5a1.84 1.84 0 001.847 1.833v-1.5zm-.347-.333c0-.173.147-.333.347-.333v-1.5a1.84 1.84 0 00-1.847 1.833h1.5zm.347-.333c.2 0 .348.16.348.333h1.5c0-1.02-.838-1.833-1.848-1.833v1.5zm8.047.333a.342.342 0 01-.348.333v1.5c1.01 0 1.848-.812 1.848-1.833h-1.5zm-.348.333c-.2 0-.347-.16-.347-.333h-1.5a1.84 1.84 0 001.847 1.833v-1.5zm0-.666c.2 0 .348.16.348.333h1.5c0-1.02-.838-1.833-1.848-1.833v1.5zm-7.699-14.75l5.213.001v-1.5h-5.213v1.5zm5.213.001h2.486v-1.5h-2.486v1.5zm12.82 10.418c.2 0 .347.16.347.333h1.5a1.842 1.842 0 00-1.848-1.833v1.5zm.347.333a.342.342 0 01-.348.333v1.5c1.01 0 1.848-.812 1.848-1.833h-1.5zm-.695 0c0-.174.147-.333.347-.333v-1.5a1.84 1.84 0 00-1.847 1.833h1.5zM23.833 1.749c1.981 0 4.353.445 6.319 1.526C32.1 4.346 33.62 6.02 34.045 8.51l1.479-.253c-.52-3.037-2.397-5.056-4.65-6.295C28.638.73 26.004.249 23.832.249v1.5zm11.024 7.38c1.674-.16 4.609.318 6.921 2.078 2.253 1.713 3.995 4.702 3.279 9.776l1.485.21c.787-5.576-1.143-9.116-3.855-11.18-2.653-2.018-5.976-2.568-7.973-2.377l.143 1.493zM10.393 34.945h4.172v-1.5h-4.171v1.5zm4.922-.75v-7.39h-1.5v7.39h1.5zm5.064 3.248V26.805h-1.5v10.638h1.5zm6.602 1.083a.34.34 0 01.318-.332L27.18 36.7a1.84 1.84 0 00-1.7 1.827h1.5zm.318-.332h.03v-1.5c-.05 0-.1.001-.149.005l.119 1.495zm.78-.75v-10.64h-1.5v10.64h1.5zm3.564-10.64v7.39h1.5v-7.39h-1.5zm6.018 7.724c-.2 0-.347-.16-.347-.333h-1.5c0 1.02.838 1.833 1.847 1.833v-1.5zm-5.268.417h4.17v-1.5h-4.17v1.5zm-12.014-8.14v-4.111h-1.5v4.11h1.5zm7.7 0v-4.111h-1.5v4.11h1.5zM19.791 9.238h.658v-1.5h-.658v1.5zm.658 0h.659v-1.5h-.659v1.5zm-.75-2.657v1.907h1.5V6.581h-1.5zm3.029-1.213v3.12h1.5v-3.12h-1.5zm.75 2.37h-.659v1.5h.659v-1.5zm.658 0h-.658v1.5h.658v-1.5zm1.712 1.5h.659v-1.5h-.66v1.5zm.659 0h.658v-1.5h-.659v1.5zm-.75-2.657v1.907h1.5V6.582h-1.5zm-10.229 5.372v.65h1.5v-.65h-1.5zm0 .65v.65h1.5v-.65h-1.5zm.75-.75h-2.24v1.5h2.24v-1.5zm-.75 3.088v.65h1.5v-.65h-1.5zm0 .65v.65h1.5v-.65h-1.5zm.75-.75h-3.163v1.5h3.163v-1.5zm-.75 3.088v.65h1.5v-.65h-1.5zm0 .65v.65h1.5v-.65h-1.5zm.75-.75h-2.24v1.5h2.24v-1.5zm13.65-5.876v.65h1.5v-.65h-1.5zm0 .65v.65h1.5v-.65h-1.5zm.75.75h2.115v-1.5h-2.116v1.5zm-.75 1.588v.65h1.5v-.65h-1.5zm0 .65v.65h1.5v-.65h-1.5zm.75.75h3.162v-1.5h-3.163v1.5zm-.75 1.588v.65h1.5v-.65h-1.5zm0 .65v.65h1.5v-.65h-1.5zm2.865-.75h-2.116v1.5h2.116v-1.5z" fill="url(#paint0_linear)"></path>
+      <path d="M20.541 12.706h5.875v5.775h-5.875v-5.775z" stroke="url(#paint1_linear)" stroke-width="1.5"></path>
+      <defs>
+        <linearGradient id="paint0_linear" x1="2.031" y1=".999" x2="39.191" y2="45.295" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+        <linearGradient id="paint1_linear" x1="19.961" y1="11.956" x2="27.066" y2="19.327" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+      </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 37" id="whyIcon5">
+      <path d="M13.227 13.32a1 1 0 100-2v2zm-9.649-2a1 1 0 100 2v-2zm9.649 17.483a1 1 0 100-2v2zm-9.649-2a1 1 0 100 2v-2zm7.906-5.742a1 1 0 100-2v2zM1 19.061a1 1 0 100 2v-2zM30.82 7.22l.09-.996-.044-.004h-.046v1zM32.11 3a1 1 0 100-2v2zm-5.157-2a1 1 0 100 2V1zm1.29 6.22v-1h-.046l-.045.004.09.996zm9.796 15.133a1 1 0 000-2v2zm-8.508-1h-1v1h1v-1zm1-8.387a1 1 0 10-2 0h2zM13.227 11.32H3.578v2h9.649v-2zm0 15.483H3.578v2h9.649v-2zm-1.743-7.742H1v2h10.484v-2zM28.152 6.223c-7.728.7-13.8 7.216-13.8 15.129h2c0-6.87 5.274-12.53 11.98-13.137l-.18-1.992zm-13.8 15.129c0 8.377 6.808 15.192 15.18 15.192v-2c-7.266 0-13.18-5.918-13.18-13.192h-2zm15.18 15.192c8.371 0 15.179-6.815 15.179-15.192h-2c0 7.274-5.914 13.192-13.18 13.192v2zM44.71 21.352c0-7.913-6.073-14.429-13.8-15.13l-.18 1.993c6.705.607 11.98 6.268 11.98 13.137h2zm-6.672-1H29.53v2h8.508v-2zm-7.508 1v-8.387h-2v8.387h2zM32.11.999h-2.62v2h2.62v-2zm-2.62 0h-2.536v2h2.535v-2zm-1 1v5.22h2v-5.22h-2zm-.247 6.22h2.577v-2h-2.577v2z" fill="url(#paint0_linear)"></path>
+      <defs>
+        <linearGradient id="paint0_linear" x1="1.98" y1="1.999" x2="33.647" y2="43.266" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00CDFF"></stop>
+          <stop offset=".406" stop-color="#7744D2"></stop>
+          <stop offset=".698" stop-color="#FF3C01"></stop>
+          <stop offset="1" stop-color="#FFC700"></stop>
+        </linearGradient>
+      </defs>
+    </symbol>
+  </svg>
+<script src="vendors.bundle.js"></script><script src="index.bundle.js"></script></body>
+</html>
