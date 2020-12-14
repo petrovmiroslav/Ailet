@@ -78,7 +78,7 @@ export default class Sphere {
 	}
 
   init () {
-    if (!this.canvasSupport) {
+    if (/* !this.canvasSupport */1) {
       this.start = this.stop = () => {};
       return;
     }

@@ -95,12 +95,6 @@ export class Menu {
   }
 
   toggleMenuButton () {
-    this.menuButton.lineTop.classList.toggle('menuButon__iconLine--transform-down');
-    this.menuButton.lineTop.classList.toggle('menuButon__iconLine--active');
-    
-    this.menuButton.lineBottom.classList.toggle('menuButon__iconLine--transform-up');
-    this.menuButton.lineBottom.classList.toggle('menuButon__iconLine--active');
-
     this.menuButton.button.classList.toggle('menuButon--active');
 
     this.toggleLogo();

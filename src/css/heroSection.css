@@ -150,6 +150,14 @@
     bottom: unset;
     right: unset;
   }
+  .heroBlockLeft__header {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .heroBlockLeft__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
   .heroSection__borderTopHeaderContainer {
     margin: 0 auto;
     padding: 12px;
