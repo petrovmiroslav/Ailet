@@ -88,6 +88,15 @@
   appearance: none;
   text-decoration: none;
 }
+.contact__tel {
+  appearance: auto;
+  height: auto;
+  background: none;
+  border-radius: unset;
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap;
+}
 .contacts__borderTopHeader {
   margin: 0;
 }

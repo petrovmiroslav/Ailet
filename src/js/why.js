@@ -9,10 +9,15 @@ export class Why {
     this.ScrollTrigger = ScrollTrigger;
 
     this.contentBlocks = this.gsap.utils.toArray('.whyParallax__contentBlock');
+
+    this.setScrollTrigerToAllContentBlocks = this.setScrollTrigerToAllContentBlocks.bind(this);
   }
 
   init () {
-    this.setScrollTrigerToAllContentBlocks();
+    this.ScrollTrigger.matchMedia({
+	
+      "(min-width: 415px)": this.setScrollTrigerToAllContentBlocks,
+    });
   }
 
   setScrollTrigerToAllContentBlocks () {

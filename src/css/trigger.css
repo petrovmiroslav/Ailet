@@ -96,11 +96,8 @@
     font-size: 16px;
     line-height: 18px;
   }
-
-  /* .trigger__linkText {
-    background: none;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: black;
-    color: black;
-  } */
+  .trigger__linkText {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

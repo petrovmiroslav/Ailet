@@ -19,3 +19,9 @@
   line-height: 25px;
   color: #FFFFFF;
 }
+
+@media (max-width: 414px) {
+  .link {
+    height: 48px;
+  }
+}

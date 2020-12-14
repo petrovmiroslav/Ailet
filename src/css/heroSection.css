@@ -13,6 +13,7 @@
   top: 0;
   bottom: 0;
   overflow: hidden;
+  background-color: #FFFFFF;
 }
 .backgoundLogo__img {
   /* max-width: 100%;
@@ -39,19 +40,28 @@
   max-width: 1680px;
   min-height: 100vh;
   margin: auto;
-  padding: 166px 112px 166px;
+  padding: 166px 112px 10%;
   overflow-x: hidden;
   box-sizing: border-box;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between;
   align-items: flex-end;
+  flex-wrap: wrap; */
+}
+.heroSection__contentContainer {
+  width: 100%;
+  margin: auto auto 0;
+  display: flex;
   flex-wrap: wrap;
 }
 .heroSection__block {
-
+  flex: 0 50%;
 }
 .heroSection__block--left {
+  
+}
+.heroBlockLeft__content {
   max-width: 600px;
 }
 .heroBlockLeft__header {
@@ -85,9 +95,16 @@
 }
 
 .heroSection__block--right {
+  
+}
+.heroSection__gradientHeadersContainer {
   width: 386px;
-  margin: 36px 0 0;
+  margin: 0 0 0 auto;
   border-top: 2px solid #0F001E;
+  position: relative;
+}
+.heroSection__gradientHeadersLayout {
+  position: absolute;
 }
 .heroBlockRight__header {
   margin: 30px 0 0 0;
@@ -125,22 +142,35 @@
   .heroSection__inner {
     padding: 166px 64px 166px;
   }
+  .heroSection__block {
+    flex: 0 100%;
+  }
   .heroSection__borderTopHeaderContainer {
     padding: 0 64px;
   }
   .heroSection__block--right {
     width: 100%;
+  }
+  .heroSection__gradientHeadersContainer {
+    width: 100%;
+  }
+  .heroSection__gradientHeadersLayout {
+    position: relative;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .heroBlockRight__header {
     width: 31%;
+  }
+  .heroBlockLeft__link, .heroSection .heroBlockLeft__link {
+    margin: 32px 0 14px;
   }
 }
 
 @media (max-width: 414px) {
   .heroSection__inner {
-    padding: 166px 12px;
+    padding: 166px 12px 10%;
   }
   .heroSection__backgoundLogoImg {
     /* height: 100vh; */
@@ -165,7 +195,16 @@
   .heroSection__block--right {
     display: block;
   }
+  .heroSection__block--bottom {
+    text-align: center;
+  }
   .heroBlockRight__header {
     width: 100%;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .heroBlockRight__gradientText {
+    font-size: 18px;
+    line-height: 20px;
   }
 }

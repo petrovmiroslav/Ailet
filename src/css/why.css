@@ -39,6 +39,8 @@
   align-items: flex-start;
 }
 .whyParallax__icon {
+  max-width: 36px;
+  max-height: 36px;
   position: absolute;
   left: 0;
 }
@@ -222,10 +224,6 @@
   .whyParallax__text {
     font-size: 18px;
     line-height: 20px;
-  }
-  .whyParallax__icon {
-    max-width: 36px;
-    max-height: 36px;
   }
   .why__partnersInner {
     display: block;
