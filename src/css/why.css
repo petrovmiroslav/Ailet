@@ -103,6 +103,7 @@
   padding: 15px 30px;
   display: inline-block;
   cursor: pointer;
+  text-decoration: none;
 }
 .caseLink__circle {
   width: 30px;
